@@ -1788,6 +1788,16 @@ button:focus-visible .arrow--diagonal {
   min-height: 600px;
 }
 
+.site.embedded {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100%;
+  overflow-x: clip;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
 .embedded .section-nav {
   display: none;
 }
@@ -2977,7 +2987,7 @@ button:focus-visible .arrow--diagonal {
 </div>
 </header>
 <div class="insight-list">
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/rics-red-book-update-10-things-you-need-to-know" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/rics-red-book-update-10-things-you-need-to-know" target="_blank" rel="noopener noreferrer">
 <span class="insight-list__index">01</span>
 <span class="insight-list__meta">Valuation guidance<small>October 2023</small>
 </span>
@@ -2989,7 +2999,7 @@ button:focus-visible .arrow--diagonal {
 </span>
 </span>
 </a>
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/the-impact-on-capital-accounting-valuations-of-local-authority-property-assets" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/the-impact-on-capital-accounting-valuations-of-local-authority-property-assets" target="_blank" rel="noopener noreferrer">
 <span class="insight-list__index">02</span>
 <span class="insight-list__meta">Public sector valuation<small>October 2023</small>
 </span>
@@ -3001,7 +3011,7 @@ button:focus-visible .arrow--diagonal {
 </span>
 </span>
 </a>
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2020/july/rising-to-the-challenge" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2020/july/rising-to-the-challenge" target="_blank" rel="noopener noreferrer">
 <span class="insight-list__index">03</span>
 <span class="insight-list__meta">Valuation research<small>July 2020</small>
 </span>
@@ -3014,7 +3024,7 @@ button:focus-visible .arrow--diagonal {
 </span>
 </a>
 </div>
-<a class="text-link insights__link" href="https://www.lsh.co.uk/explore/research-and-views" target="_top">Explore all LSH research and views <span class="arrow" aria-hidden="true">
+<a class="text-link insights__link" href="https://www.lsh.co.uk/explore/research-and-views" target="_blank" rel="noopener noreferrer">Explore all LSH research and views <span class="arrow" aria-hidden="true">
 <span>
 </span>
 </span>
@@ -3288,7 +3298,49 @@ button:focus-visible .arrow--diagonal {
   const site = document.querySelector('.site');
   if (!site) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (new URLSearchParams(location.search).get('embed') === '1' || self !== top) site.classList.add('embedded');
+  const embedded = new URLSearchParams(location.search).get('embed') === '1' || self !== top;
+  if (embedded) {
+    site.classList.add('embedded');
+
+    // Infogram keeps embedded webpages on a fixed 1,248px canvas and scales that
+    // canvas on narrow screens. Reapply this page's responsive rules using the
+    // real browser width, then counter-scale the page so type remains readable.
+    const responsiveOverride = document.createElement('style');
+    responsiveOverride.setAttribute('data-embedded-responsive', 'true');
+    document.head.append(responsiveOverride);
+
+    const syncEmbeddedViewport = () => {
+      const viewportCandidates = [innerWidth, outerWidth];
+      if (window.screen && window.screen.width) viewportCandidates.push(window.screen.width);
+      const hostWidth = Math.max(320, Math.min(...viewportCandidates.filter((value) => Number.isFinite(value) && value > 0)));
+      const scale = Math.max(1, innerWidth / hostWidth);
+      const responsiveRules = [];
+
+      for (const sheet of document.styleSheets) {
+        let rules;
+        try { rules = [...sheet.cssRules]; } catch { continue; }
+        for (const rule of rules) {
+          const match = rule.conditionText?.match(/max-width:\s*(\d+)px/i);
+          if (!match || hostWidth > Number(match[1]) || innerWidth <= Number(match[1])) continue;
+          responsiveRules.push([...rule.cssRules].map((child) => child.cssText).join('\n'));
+        }
+      }
+
+      responsiveOverride.textContent = responsiveRules.join('\n');
+      if (scale > 1.01) {
+        site.style.width = hostWidth + 'px';
+        site.style.height = innerHeight / scale + 'px';
+        site.style.zoom = String(scale);
+      } else {
+        site.style.removeProperty('width');
+        site.style.removeProperty('height');
+        site.style.removeProperty('zoom');
+      }
+    };
+
+    syncEmbeddedViewport();
+    addEventListener('resize', syncEmbeddedViewport, { passive: true });
+  }
 
   const reveals = [...site.querySelectorAll('[data-reveal]')];
   if (reduced || !('IntersectionObserver' in window)) reveals.forEach((el) => el.classList.add('is-visible'));
