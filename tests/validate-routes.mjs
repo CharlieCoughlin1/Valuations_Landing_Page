@@ -36,7 +36,7 @@ function renderRoute(slug) {
   return html;
 }
 
-if (routes.length !== 28) failures.push(`Expected 28 query routes; found ${routes.length}.`);
+if (routes.length !== 29) failures.push(`Expected 29 query routes; found ${routes.length}.`);
 
 for (const slug of routes) {
   let html;
@@ -75,8 +75,8 @@ for (const slug of routeSet) {
 
 const requiredHubPatterns = [
   [/<a class="audience-card" href="\?page=/g, 5, 'audience links'],
-  [/<a class="service-card" href="\?page=/g, 8, 'service links'],
-  [/<a class="specialism-card" href="\?page=/g, 3, 'specialism links'],
+  [/<a class="service-card" href="\?page=/g, 9, 'service links'],
+  [/<a class="specialism-card" href="\?page=/g, 4, 'specialism links'],
   [/<a class="sector-card" href="\?page=/g, 12, 'sector links'],
   [/<a class="case-card" href="\?page=case-studies"/g, 3, 'case-study links']
 ];
@@ -86,9 +86,33 @@ for (const [pattern, expected, label] of requiredHubPatterns) {
   if (count !== expected) failures.push(`Expected ${expected} ${label}; found ${count}.`);
 }
 
-if (!index.includes('Page deferred pending specialist confirmation')) {
-  failures.push('Expert Witness deferral is not visible on the hub.');
+if (!index.includes('href="?page=expert-witness"') || !routeSet.has('expert-witness')) failures.push('Expert Witness click-through is not complete.');
+
+const hubIds = [...index.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
+const hubHashLinks = [...index.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]);
+for (const target of hubHashLinks) {
+  if (!hubIds.includes(target)) failures.push(`Hub: #${target} has no matching target.`);
 }
+for (const id of new Set(hubIds)) {
+  if (hubIds.filter((candidate) => candidate === id).length > 1) failures.push(`Hub: duplicate id #${id}.`);
+}
+
+const externalLinks = [...allSource.matchAll(/<a\b[^>]*href="https:\/\/[^>]+>/g)].map((match) => match[0]);
+for (const link of externalLinks) {
+  if (!/target="_blank"/.test(link) || !/rel="noopener noreferrer"/.test(link)) failures.push(`External link is missing safe new-tab behaviour: ${link.match(/href="([^"]+)/)?.[1]}.`);
+}
+
+const buttons = [...allSource.matchAll(/<button\b[^>]*>/g)].map((match) => match[0]);
+for (const button of buttons) {
+  if (!/type="(?:button|submit)"/.test(button)) failures.push(`Button is missing an explicit type: ${button}.`);
+}
+
+if (/href=""|href="#"/.test(allSource)) failures.push('An empty link target remains.');
+if (/pending approval|approval is pending|candidate page specialist|page deferred|in preparation · sign-off required/i.test(allSource)) failures.push('A publication placeholder remains.');
+const unavailableLabels = ['P' + 'DF', 'Lender Capability ' + 'Pack', 'Public Sector Valuation ' + 'Guide', 'Valuation Process ' + 'Overview'];
+if (unavailableLabels.some((label) => allSource.includes(label))) failures.push('An unavailable document reference remains.');
+if (!source.includes('history.scrollRestoration = \'manual\'') || !index.includes('resetRouteViewport')) failures.push('Route-top reset is missing.');
+if (!index.includes('.site.embedded') || !index.includes('overflow-y: auto')) failures.push('Embedded mobile scrolling styles are missing.');
 
 if (failures.length) {
   console.error(failures.join('\n'));
