@@ -248,7 +248,7 @@ button:focus-visible .arrow--diagonal {
 .eyebrow {
   margin: 0;
   color: var(--lsh-red);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.17em;
   line-height: 1.2;
@@ -396,7 +396,7 @@ button:focus-visible .arrow--diagonal {
 .hero__side-index {
   margin-bottom: 41px;
   color: var(--lsh-gold-light);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -447,7 +447,7 @@ button:focus-visible .arrow--diagonal {
 
 .stat > span:last-child {
   margin-top: 12px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -513,7 +513,7 @@ button:focus-visible .arrow--diagonal {
   padding: 11px 15px;
   border-radius: 2px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   transition: color 180ms ease, background 180ms ease;
@@ -600,8 +600,8 @@ button:focus-visible .arrow--diagonal {
   grid-column: span 3;
 }
 
-.audience-card:hover,
-.audience-card:focus-visible {
+.audience-card[href]:hover,
+.audience-card[href]:focus-visible {
   border-color: rgba(0, 43, 92, 0.36);
   box-shadow: var(--shadow-lift);
   transform: translateY(-5px);
@@ -609,7 +609,7 @@ button:focus-visible .arrow--diagonal {
 
 .card-number {
   color: var(--lsh-red);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
@@ -636,18 +636,6 @@ button:focus-visible .arrow--diagonal {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.48;
-}
-
-.card-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin-top: auto;
-  padding-top: 26px;
-  color: var(--lsh-red);
-  font-size: 11px;
-  font-weight: 700;
 }
 
 .services {
@@ -697,8 +685,8 @@ button:focus-visible .arrow--diagonal {
   border-bottom: 0;
 }
 
-.service-card:hover,
-.service-card:focus-visible {
+.service-card[href]:hover,
+.service-card[href]:focus-visible {
   background: rgba(255, 255, 255, 0.075);
 }
 
@@ -715,28 +703,6 @@ button:focus-visible .arrow--diagonal {
 .service-card p {
   max-width: 300px;
   color: rgba(255, 255, 255, 0.61);
-}
-
-.service-card__arrow {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  align-self: flex-end;
-  margin-top: auto;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 50%;
-  color: var(--lsh-gold-light);
-  transition: background 220ms ease, color 220ms ease;
-}
-
-.service-card__arrow .arrow {
-  width: 16px;
-}
-
-.service-card:hover .service-card__arrow {
-  background: var(--lsh-gold);
-  color: var(--lsh-navy-deep);
 }
 
 .specialisms {
@@ -761,8 +727,8 @@ button:focus-visible .arrow--diagonal {
   transition: border-color 240ms ease, box-shadow 240ms ease, transform 240ms ease;
 }
 
-.specialism-card:hover,
-.specialism-card:focus-visible {
+.specialism-card[href]:hover,
+.specialism-card[href]:focus-visible {
   border-color: var(--lsh-navy);
   box-shadow: var(--shadow-lift);
   transform: translateY(-5px);
@@ -799,8 +765,8 @@ button:focus-visible .arrow--diagonal {
   transition: background 220ms ease, color 220ms ease, transform 220ms ease;
 }
 
-.sector-card:hover,
-.sector-card:focus-visible {
+.sector-card[href]:hover,
+.sector-card[href]:focus-visible {
   z-index: 1;
   background: var(--lsh-navy);
   color: #fff;
@@ -809,7 +775,7 @@ button:focus-visible .arrow--diagonal {
 
 .sector-card > span {
   color: var(--lsh-red);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -820,11 +786,11 @@ button:focus-visible .arrow--diagonal {
 
 .sector-card p {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.sector-card:hover p,
-.sector-card:focus-visible p {
+.sector-card[href]:hover p,
+.sector-card[href]:focus-visible p {
   color: rgba(255, 255, 255, 0.67);
 }
 
@@ -850,9 +816,15 @@ button:focus-visible .arrow--diagonal {
   color: rgba(255, 255, 255, 0.67);
 }
 
-.coverage__copy .text-link {
-  margin-top: 30px;
+.coverage__assurance {
+  max-width: 460px;
+  margin: 30px 0 0;
+  padding-left: 15px;
+  border-left: 2px solid var(--lsh-gold);
   color: var(--lsh-gold-light);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .office-list {
@@ -867,7 +839,7 @@ button:focus-visible .arrow--diagonal {
 
 .office-list li {
   color: rgba(255, 255, 255, 0.55);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -906,7 +878,8 @@ button:focus-visible .arrow--diagonal {
 .coverage-map__land {
   fill: rgba(255, 255, 255, 0.025);
   stroke: rgba(232, 217, 172, 0.47);
-  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
 }
 
 .coverage-map__pin {
@@ -941,7 +914,7 @@ button:focus-visible .arrow--diagonal {
 .coverage-map__count small {
   margin-top: 12px;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -963,8 +936,19 @@ button:focus-visible .arrow--diagonal {
   color: rgba(6, 31, 57, 0.72);
 }
 
-.lender__intro .button {
-  margin-top: 30px;
+.lender__credential,
+.quality__assurance {
+  display: inline-block;
+  margin: 30px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--lsh-red);
+  background: rgba(255, 255, 255, 0.34);
+  color: var(--lsh-navy-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .panel-network {
@@ -977,7 +961,7 @@ button:focus-visible .arrow--diagonal {
 .panel-network > p {
   margin: 0 0 27px;
   color: rgba(6, 31, 57, 0.6);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1009,7 +993,7 @@ button:focus-visible .arrow--diagonal {
 }
 
 .panel-logos small {
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
@@ -1054,7 +1038,7 @@ button:focus-visible .arrow--diagonal {
 .quality-grid article p {
   margin: 15px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -1112,7 +1096,7 @@ button:focus-visible .arrow--diagonal {
   border-radius: 50%;
   background: var(--canvas);
   color: var(--lsh-red);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   transition: background 250ms ease, color 250ms ease, transform 250ms ease;
 }
@@ -1130,8 +1114,9 @@ button:focus-visible .arrow--diagonal {
   font-weight: 500;
 }
 
-.quality__link {
+.quality__assurance {
   margin-top: 48px;
+  background: #fff;
 }
 
 .experience {
@@ -1171,7 +1156,7 @@ button:focus-visible .arrow--diagonal {
   justify-content: space-between;
   gap: 20px;
   color: rgba(255, 255, 255, 0.58);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -1233,13 +1218,13 @@ button:focus-visible .arrow--diagonal {
 
 .insight-list__index {
   color: var(--lsh-red);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .insight-list__meta {
   color: var(--lsh-red);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -1249,7 +1234,7 @@ button:focus-visible .arrow--diagonal {
   display: block;
   margin-top: 6px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   letter-spacing: 0;
   text-transform: none;
@@ -1325,7 +1310,7 @@ button:focus-visible .arrow--diagonal {
 
 .faq-list summary > span {
   color: var(--lsh-red);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -1434,7 +1419,7 @@ button:focus-visible .arrow--diagonal {
   display: block;
   margin-top: 5px;
   color: rgba(255, 255, 255, 0.58);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1.35;
 }
@@ -1448,8 +1433,9 @@ button:focus-visible .arrow--diagonal {
 
 .person__links a {
   color: var(--lsh-gold-light);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
+  overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-color: rgba(232, 217, 172, 0.28);
   text-underline-offset: 3px;
@@ -1474,7 +1460,7 @@ button:focus-visible .arrow--diagonal {
   display: block;
   margin-bottom: 20px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1519,7 +1505,7 @@ button:focus-visible .arrow--diagonal {
 .form-note {
   margin: 14px 0 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -1679,7 +1665,7 @@ button:focus-visible .arrow--diagonal {
   display: block;
   margin-bottom: 6px;
   color: var(--lsh-red);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -1709,8 +1695,9 @@ button:focus-visible .arrow--diagonal {
 
 .team-card__links a {
   color: var(--lsh-red);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
+  overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-color: rgba(204, 32, 48, 0.22);
   text-underline-offset: 3px;
@@ -1725,7 +1712,7 @@ button:focus-visible .arrow--diagonal {
   display: inline-block;
   margin-top: 12px;
   color: var(--lsh-mid-grey);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -1743,7 +1730,7 @@ button:focus-visible .arrow--diagonal {
 .team-modal__footer p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -2419,7 +2406,870 @@ button:focus-visible .arrow--diagonal {
 }
 </style>
 </head>
-<body><link rel="preload" as="image" href="https://www.lsh.co.uk/-/media/images/lsh/people/manchester/christiaan-flatley.jpg?rev=3860a58643a049858b5c5c3b3953a3b7"/><link rel="preload" as="image" href="https://www.lsh.co.uk/-/media/images/lsh/people/london-we/oliver-leeming.jpg?rev=54bb77e088cb4c5e9900a75e382279b2"/><div class="site"><a class="skip-link" href="#main-content">Skip to main content</a><main id="main-content"><section class="hero" id="top" aria-labelledby="hero-title"><div class="hero__grid" aria-hidden="true"></div><div class="hero__glow" aria-hidden="true"></div><div class="hero__content" data-hero="content"><p class="eyebrow">LSH Valuation</p><h1 id="hero-title">Valuation advice grounded in evidence. <span>Delivered across the UK.</span></h1><p class="hero__lede">RICS-registered valuers across 17 UK offices. Loan security, financial reporting, public sector and specialist valuations — backed by more than 5,900 instructions and £38bn in assets valued.</p><div class="hero__actions"><a class="button button--red" href="#contact">Speak to a valuation specialist <span class="arrow" aria-hidden="true"><span></span></span></a><a class="text-link text-link--light" href="#services">Find the right service <span class="arrow" aria-hidden="true"><span></span></span></a></div></div><aside class="hero__side-note" data-hero="credential" aria-label="Valuation responsibility"><span class="hero__side-index">Named responsibility</span><strong>One accountable valuer from instruction to delivery.</strong><p>RICS Red Book compliant. Independently peer reviewed.</p></aside></section><section class="evidence" aria-label="LSH Valuation at a glance"><div class="stat"><strong><span aria-label="80+" data-counter-end="80" data-counter-prefix="" data-counter-suffix="+" data-counter-delay="0">0+</span></strong><span>RICS Registered Valuers</span></div><div class="stat"><strong><span aria-label="2,000+" data-counter-end="2000" data-counter-prefix="" data-counter-suffix="+" data-counter-delay="180">0+</span></strong><span>bespoke reports annually</span></div><div class="stat"><strong><span aria-label="17" data-counter-end="17" data-counter-prefix="" data-counter-suffix="" data-counter-delay="360">0</span></strong><span>UK offices</span></div><div class="stat"><strong><span aria-label="£10bn+" data-counter-end="10" data-counter-prefix="£" data-counter-suffix="bn+" data-counter-delay="540">£0bn+</span></strong><span>valued annually</span></div><div class="stat stat--statement"><span>Panel-approved for major UK lenders</span></div></section><nav class="section-nav" aria-label="On this page"><span class="section-nav__progress" aria-hidden="true"></span><div><a href="#audiences">Who we help</a><a href="#services">Services</a><a href="#sectors">Sectors</a><a href="#quality">Quality</a><a href="#experience">Experience</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></div></nav><section class="audiences content-section" id="audiences" aria-labelledby="audiences-title" data-reveal="true"><header class="section-heading section-heading--split"><div><p class="section-label">Start with your instruction</p><span class="section-kicker">Who we help</span></div><div><h2 id="audiences-title">The right route, from the outset.</h2><p>Our practice covers every major instruction type, from single-asset loan security valuations to regulated purpose valuations, public sector asset registers and expert witness appointments.</p></div></header><div class="audience-grid"><a class="audience-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">01</span><h3>Lenders and banks</h3><p>Loan security valuations for single assets, portfolios and complex lending decisions.</p><span class="card-action">Explore <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="audience-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">02</span><h3>Investors and funds</h3><p>Independent evidence for acquisition, reporting, strategy and portfolio review.</p><span class="card-action">Explore <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="audience-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">03</span><h3>Corporates</h3><p>Audit-ready valuations for accounts, governance and property-led decisions.</p><span class="card-action">Explore <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="audience-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">04</span><h3>Public sector and NHS</h3><p>Consistent asset register programmes across large and diverse estates.</p><span class="card-action">Explore <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="audience-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">05</span><h3>Operators and developers</h3><p>Sector-led analysis for trading assets, development and optimisation.</p><span class="card-action">Explore <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a></div></section><section class="services" id="services" aria-labelledby="services-title" data-reveal="true"><header class="section-heading section-heading--dark"><div><p class="section-label">Core services</p><span class="section-kicker">Nine routes to advice</span></div><div><h2 id="services-title">Valuation expertise, matched to purpose.</h2><p>Every instruction is led by a named RICS Registered Valuer, tracked from receipt to report delivery and subject to structured peer review.</p></div></header><div class="service-grid"><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/loan-security" target="_top"><span class="card-number">01</span><h3>Loan security</h3><p>RICS Red Book compliant advice for lenders across every major asset class.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/asset-register" target="_top"><span class="card-number">02</span><h3>Asset register</h3><p>Auditable portfolio valuations for public bodies and complex estates.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/financial-reporting" target="_top"><span class="card-number">03</span><h3>Regulated purpose valuation</h3><p>Independent valuations for company accounts under IFRS and UK GAAP.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">04</span><h3>Expert witness</h3><p>Clear, evidence-led valuation opinion for disputes and legal proceedings.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/property-restructuring" target="_top"><span class="card-number">05</span><h3>LPA receivership</h3><p>Valuation and property strategy for lenders and insolvency practitioners.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">06</span><h3>Development appraisal</h3><p>Market-tested viability analysis for land and development decisions.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">07</span><h3>Portfolio optimisation</h3><p>Valuation-led analysis to identify risk, opportunity and next actions.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">08</span><h3>Charities Act</h3><p>Qualified valuation advice for charity property acquisitions and disposals.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a class="service-card" data-reveal-item="true" href="https://propertyauctions.lsh.co.uk/" target="_top"><span class="card-number">09</span><h3>Auctions</h3><p>Market-facing valuation insight supported by LSH&#x27;s national auctions team.</p><span class="service-card__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a></div></section><section class="specialisms content-section" aria-labelledby="specialisms-title" data-reveal="true"><header class="section-heading section-heading--split"><div><p class="section-label">Strategic specialisms</p><span class="section-kicker">Beyond the report</span></div><div><h2 id="specialisms-title">Specialist advice for complex assets.</h2><p>Where the instruction requires more than a valuation, our teams combine asset-class knowledge with advisory, transaction and portfolio expertise.</p></div></header><div class="specialism-grid"><a class="specialism-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/specialisms/operational-real-estate" target="_top"><span class="card-number">01</span><h3>Operational real estate</h3><p>Valuation, M&amp;A advice, portfolio optimisation and transaction support for trading assets.</p><span class="card-action">View specialism <span class="arrow" aria-hidden="true"><span></span></span></span></a><a class="specialism-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/specialisms/asset-valuation-services" target="_top"><span class="card-number">02</span><h3>Asset valuation services</h3><p>Structured programmes for NHS bodies, local authorities and government agencies.</p><span class="card-action">View specialism <span class="arrow" aria-hidden="true"><span></span></span></span></a><a class="specialism-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation" target="_top"><span class="card-number">03</span><h3>Expert witness and Section 18</h3><p>Defensible opinion for litigation, arbitration and statutory compensation matters.</p><span class="card-action">View specialism <span class="arrow" aria-hidden="true"><span></span></span></span></a><a class="specialism-card" data-reveal-item="true" href="https://www.lsh.co.uk/valuation/sectors/residential-btr" target="_top"><span class="card-number">04</span><h3>Residential and BTR</h3><p>Residential valuation informed by specialist market teams and Connells Group data.</p><span class="card-action">View specialism <span class="arrow" aria-hidden="true"><span></span></span></span></a></div></section><section class="sector-section content-section" id="sectors" aria-labelledby="sectors-title" data-reveal="true"><header class="section-heading section-heading--split section-heading--compact"><div><p class="section-label">Sector intelligence</p></div><div><h2 id="sectors-title">Direct experience in the asset class.</h2><p>Every sector is supported by valuers with relevant transactional and market experience.</p></div></header><div class="sector-grid"><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>01</span><h3>Residential and BTR</h3><p>Homes, portfolios and purpose-built rental</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>02</span><h3>Commercial</h3><p>Offices, retail and industrial property</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>03</span><h3>Operational real estate</h3><p>Trading assets and operating businesses</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>04</span><h3>Industrial and logistics</h3><p>Warehousing, distribution and production</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>05</span><h3>Retail</h3><p>High street, retail parks and shopping centres</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>06</span><h3>Healthcare</h3><p>Care, clinical and specialist facilities</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>07</span><h3>Education</h3><p>Schools, colleges and universities</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>08</span><h3>Land and development</h3><p>Sites, viability and development value</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>09</span><h3>Transport and infrastructure</h3><p>Ports, airports and transport assets</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>10</span><h3>Senior living</h3><p>Retirement and later-living property</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>11</span><h3>Student accommodation</h3><p>PBSA schemes and portfolios</p></a><a class="sector-card" data-reveal-item="true" href="https://www.lsh.co.uk/explore/services/valuation/sector-expertise" target="_top"><span>12</span><h3>Mixed use</h3><p>Multi-sector assets and complex portfolios</p></a></div></section><section class="coverage" id="coverage" aria-labelledby="coverage-title" data-reveal="true"><div class="coverage__copy"><p class="section-label">National coverage</p><h2 id="coverage-title">UK reach. Local market evidence.</h2><p>Our valuation teams operate from 17 offices across England, Wales, Scotland and Northern Ireland. That gives us the reach to coordinate national portfolios and the local knowledge to value individual assets with precision.</p><p>Whether the instruction covers one regional asset or a portfolio spanning the UK, it is led by a valuer who understands that market.</p><a class="text-link" href="https://www.lsh.co.uk/valuation/our-people" target="_top">Find your nearest valuation specialist <span class="arrow" aria-hidden="true"><span></span></span></a><ul class="office-list" aria-label="LSH valuation office locations"><li>Belfast</li><li>Birmingham</li><li>Bristol</li><li>Cambridge</li><li>Cardiff</li><li>Chelmsford</li><li>Edinburgh</li><li>Glasgow</li><li>Leeds</li><li>London</li><li>Manchester</li><li>Milton Keynes</li><li>Newcastle</li><li>Reading</li><li>Sheffield</li><li>Southampton</li><li>Swansea</li></ul></div><div class="coverage-map" aria-label="Map showing 17 LSH valuation offices across the UK"><svg viewBox="0 0 380 560" role="img" aria-hidden="true"><path class="coverage-map__land" d="M175 28l-27 33 14 25-27 22 16 29-29 23 18 29-21 29 27 24-9 34 30 25-9 37 29 26-3 37 32 19-11 36 20 34-12 39 22 22-7 37 27 25 1 35-27 27-22-8-17-31-22 1-28 35-34-8-18-28-31-5-10-31 18-26-13-30 20-29-4-32 27-21-1-31 25-23-9-29 17-31-6-27 28-28-10-24 26-23-8-31 23-27-3-29 20-28-6-26 27-31 5-30-20-26 14-31 31-13 18-34 27-6 25-34 33-13z"></path><path class="coverage-map__land coverage-map__land--ireland" d="M64 172l-27 18-8 37 13 31 34 7 27-21-1-34-16-28z"></path><g class="coverage-map__pin" style="--pin-delay:0ms"><circle class="coverage-map__pulse" cx="176" cy="86" r="9"></circle><circle cx="176" cy="86" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:55ms"><circle class="coverage-map__pulse" cx="138" cy="105" r="9"></circle><circle cx="138" cy="105" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:110ms"><circle class="coverage-map__pulse" cx="223" cy="145" r="9"></circle><circle cx="223" cy="145" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:165ms"><circle class="coverage-map__pulse" cx="205" cy="181" r="9"></circle><circle cx="205" cy="181" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:220ms"><circle class="coverage-map__pulse" cx="155" cy="225" r="9"></circle><circle cx="155" cy="225" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:275ms"><circle class="coverage-map__pulse" cx="229" cy="236" r="9"></circle><circle cx="229" cy="236" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:330ms"><circle class="coverage-map__pulse" cx="203" cy="266" r="9"></circle><circle cx="203" cy="266" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:385ms"><circle class="coverage-map__pulse" cx="250" cy="294" r="9"></circle><circle cx="250" cy="294" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:440ms"><circle class="coverage-map__pulse" cx="172" cy="303" r="9"></circle><circle cx="172" cy="303" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:495ms"><circle class="coverage-map__pulse" cx="229" cy="326" r="9"></circle><circle cx="229" cy="326" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:550ms"><circle class="coverage-map__pulse" cx="265" cy="352" r="9"></circle><circle cx="265" cy="352" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:605ms"><circle class="coverage-map__pulse" cx="285" cy="390" r="9"></circle><circle cx="285" cy="390" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:660ms"><circle class="coverage-map__pulse" cx="247" cy="415" r="9"></circle><circle cx="247" cy="415" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:715ms"><circle class="coverage-map__pulse" cx="305" cy="436" r="9"></circle><circle cx="305" cy="436" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:770ms"><circle class="coverage-map__pulse" cx="268" cy="464" r="9"></circle><circle cx="268" cy="464" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:825ms"><circle class="coverage-map__pulse" cx="234" cy="493" r="9"></circle><circle cx="234" cy="493" r="4.5"></circle></g><g class="coverage-map__pin" style="--pin-delay:880ms"><circle class="coverage-map__pulse" cx="92" cy="215" r="9"></circle><circle cx="92" cy="215" r="4.5"></circle></g></svg><span class="coverage-map__count">17 <small>offices</small></span></div></section><section class="lender" aria-labelledby="lender-title" data-reveal="true"><div class="lender__intro"><p class="section-label">Lender assurance</p><h2 id="lender-title">Built for lending decisions.</h2><p>More than 60% of our instructions are for banks, building societies and specialist lenders. Our loan security valuations are RICS Red Book compliant, peer reviewed and delivered by named valuers with relevant asset and market experience.</p><a class="button button--red" href="https://www.lsh.co.uk/valuation/loan-security" target="_top">Explore loan security valuation <span class="arrow" aria-hidden="true"><span></span></span></a></div><div class="panel-network" aria-label="Valuation panel management platforms"><p>Instructed through leading panel managers</p><div class="panel-logos"><span><strong>VAS</strong><small>GROUP</small></span><span><strong>CVN</strong></span><span><strong>METHOD</strong></span><span><strong>Appraisers</strong><small>UK</small></span></div></div></section><section class="quality content-section" id="quality" aria-labelledby="quality-title" data-reveal="true"><header class="section-heading section-heading--split"><div><p class="section-label">Quality and methodology</p><span class="section-kicker">Defensible by design</span></div><div><h2 id="quality-title">Rigour at every stage.</h2><p>Every report is checked before issue. Higher-value instructions receive additional independent scrutiny.</p></div></header><div class="quality-grid"><article data-reveal-item="true"><span>Every report</span><strong>Peer reviewed</strong><p>A qualified checker reviews the evidence, analysis and report before delivery.</p></article><article data-reveal-item="true"><span>£10m+</span><strong>Second review</strong><p>An independent, out-of-office checker provides a further level of scrutiny.</p></article><article data-reveal-item="true"><span>£20m+</span><strong>Third-level check</strong><p>A further review is required for the practice’s highest-value instructions.</p></article></div><ol class="process-list" aria-label="Six-step valuation process"><li data-reveal-item="true"><span>01</span><strong>Instruct</strong></li><li data-reveal-item="true"><span>02</span><strong>Inspect</strong></li><li data-reveal-item="true"><span>03</span><strong>Research</strong></li><li data-reveal-item="true"><span>04</span><strong>Analyse</strong></li><li data-reveal-item="true"><span>05</span><strong>Review</strong></li><li data-reveal-item="true"><span>06</span><strong>Deliver</strong></li></ol><a class="text-link quality__link" href="https://www.lsh.co.uk/valuation/our-approach" target="_top">Read our full valuation process <span class="arrow" aria-hidden="true"><span></span></span></a></section><section class="experience" id="experience" aria-labelledby="experience-title" data-reveal="true"><header class="section-heading section-heading--light"><div><p class="section-label">Recent instructions</p><span class="section-kicker">Anonymised pending client approval</span></div><div><h2 id="experience-title">Evidence at scale.</h2><p>Recent instructions across lending, public sector and expert evidence.</p></div></header><div class="case-grid"><article class="case-card" data-reveal-item="true"><div class="case-card__top"><span>Loan security · Operational real estate</span><span>01</span></div><strong class="case-card__value">£93m</strong><h3>Major London leisure complex</h3><p>Loan security valuation of a combined casino and cinema venue for a major UK bank.</p></article><article class="case-card" data-reveal-item="true"><div class="case-card__top"><span>Asset register · Public sector</span><span>02</span></div><strong class="case-card__value">870</strong><h3>Properties across a London borough</h3><p>A coordinated asset register valuation spanning a diverse local authority estate.</p></article><article class="case-card" data-reveal-item="true"><div class="case-card__top"><span>Expert witness · Commercial</span><span>03</span></div><strong class="case-card__value">£105.5m</strong><h3>Major London office building</h3><p>Independent valuation evidence prepared for legal proceedings.</p></article></div><a class="text-link experience__link" href="https://www.lsh.co.uk/explore/work?action=search&amp;service=1e58eec504bf40ce94171ab2bc8ee879" target="_top">View valuation experience <span class="arrow" aria-hidden="true"><span></span></span></a></section><section class="insights content-section" aria-labelledby="insights-title" data-reveal="true"><header class="section-heading section-heading--split section-heading--compact"><div><p class="section-label">Market intelligence</p></div><div><h2 id="insights-title">Current insight, applied to value.</h2></div></header><div class="insight-list"><a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/july/q2-investment-top-heavy-amid-geopolitical-challenges" target="_top"><span class="insight-list__index">01</span><span class="insight-list__meta">Research<small>July 2026</small></span><strong>Q2 investment ‘Top Heavy’ amid geopolitical challenges</strong><span class="insight-list__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/may/live-and-kicking---lsh-build-to-rent-report-2026" target="_top"><span class="insight-list__index">02</span><span class="insight-list__meta">Research<small>May 2026</small></span><strong>Live &amp; Kicking: LSH Build to Rent Report 2026</strong><span class="insight-list__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a><a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/news/2026/june/philip-macauley-joins-lsh-to-expand-self-storage-valuation-and-consultancy-offering" target="_top"><span class="insight-list__index">03</span><span class="insight-list__meta">News<small>June 2026</small></span><strong>LSH expands its self storage valuation and consultancy offering</strong><span class="insight-list__arrow"><span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></span></a></div><a class="text-link insights__link" href="https://www.lsh.co.uk/explore/research-and-views" target="_top">Explore all LSH research and views <span class="arrow" aria-hidden="true"><span></span></span></a></section><section class="faq" id="faq" aria-labelledby="faq-title" data-reveal="true"><div class="faq__intro"><p class="section-label">Frequently asked questions</p><h2 id="faq-title">Before you instruct.</h2><p>Clear answers on scope, standards and delivery.</p></div><div class="faq-list"><details data-reveal-item="true"><summary><span>01</span><strong>What types of valuation do you carry out?</strong><i aria-hidden="true"></i></summary><p>We carry out the full range of RICS-recognised valuation purposes, including loan security, regulated purpose valuations for company accounts, asset register valuations, expert witness appointments, LPA receivership, development appraisal and portfolio optimisation. Every valuation is prepared by a named RICS Registered Valuer and is RICS Red Book compliant.</p></details><details data-reveal-item="true"><summary><span>02</span><strong>Are your valuers RICS registered?</strong><i aria-hidden="true"></i></summary><p>Yes. Our team includes more than 80 RICS Registered Valuers operating from 17 offices across the UK. Every valuation report is signed by a named RICS Registered Valuer who has personally inspected the property.</p></details><details data-reveal-item="true"><summary><span>03</span><strong>Are you on lender panels?</strong><i aria-hidden="true"></i></summary><p>Yes. We are panel-approved for major UK lenders and are instructed through leading valuation panel management platforms including VAS Group, CVN, Method and Appraisers UK. More than 60% of our instructions are for banks, building societies and specialist lenders.</p></details><details data-reveal-item="true"><summary><span>04</span><strong>How do you ensure the quality of your valuations?</strong><i aria-hidden="true"></i></summary><p>Every LSH valuation follows a structured six-step process. Every report is reviewed by a qualified checker before issue. Instructions above £10m require a second independent review; those above £20m require a third-level check.</p></details><details data-reveal-item="true"><summary><span>05</span><strong>Do you carry out portfolio valuations?</strong><i aria-hidden="true"></i></summary><p>Yes. Our instructions range from single assets to multi-property portfolios of more than 800 properties, coordinated across multiple asset types, sectors and UK regions.</p></details><details data-reveal-item="true"><summary><span>06</span><strong>Which sectors do you cover?</strong><i aria-hidden="true"></i></summary><p>Our practice covers 14 property sectors, including residential and BTR, offices, retail, industrial and logistics, operational real estate, land and development, education, transport and infrastructure, senior living and student accommodation.</p></details><details data-reveal-item="true"><summary><span>07</span><strong>Can you provide valuations for financial reporting purposes?</strong><i aria-hidden="true"></i></summary><p>Yes. We carry out regulated purpose valuations for company accounts under IFRS and UK GAAP, including IAS16 and IFRS16 valuations for listed companies, REITs and public sector bodies. Every regulated purpose valuation is RICS Red Book compliant and peer reviewed.</p></details><details data-reveal-item="true"><summary><span>08</span><strong>How do I instruct LSH for a valuation?</strong><i aria-hidden="true"></i></summary><p>Complete the enquiry form below or contact one of our national specialists. We will confirm the scope, purpose and parties, issue Terms of Engagement and assign a named RICS Registered Valuer.</p></details></div></section><section class="contact" id="contact" aria-labelledby="contact-title" data-reveal="true"><div class="contact__lead"><p class="section-label">Start an instruction</p><h2 id="contact-title">Speak to our valuation team.</h2><p>Whether you have a specific instruction in mind or are evaluating LSH as a panel valuer, our national specialists are ready to help.</p><button type="button" class="button button--light" aria-haspopup="dialog" aria-expanded="false" aria-controls="valuation-team-dialog" data-team-open="true">View valuation contacts <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></button><div class="contact__people"><article class="person" data-reveal-item="true"><img src="https://www.lsh.co.uk/-/media/images/lsh/people/manchester/christiaan-flatley.jpg?rev=3860a58643a049858b5c5c3b3953a3b7" alt="Christiaan Flatley"/><div><p>Christiaan Flatley</p><span>Executive Director — Head of UK Regions, Valuation</span><div class="person__links"><a href="tel:07841684807">07841 684807</a><a href="mailto:CFlatley@lsh.co.uk">CFlatley@lsh.co.uk</a></div></div></article><article class="person" data-reveal-item="true"><img src="https://www.lsh.co.uk/-/media/images/lsh/people/london-we/oliver-leeming.jpg?rev=54bb77e088cb4c5e9900a75e382279b2" alt="Oliver Leeming"/><div><p>Oliver Leeming</p><span>Executive Director — Head of Operations, Valuation</span><div class="person__links"><a href="tel:07725207641">07725 207 641</a><a href="mailto:OLeeming@lsh.co.uk">OLeeming@lsh.co.uk</a></div></div></article></div></div><form class="enquiry-form"><div class="form-row"><label>Name*<input autoComplete="name" required="" name="name"/></label><label>Company<input autoComplete="organization" name="company"/></label></div><div class="form-row"><label>Email*<input type="email" autoComplete="email" required="" name="email"/></label><label>Telephone<input type="tel" autoComplete="tel" name="telephone"/></label></div><label>Tell us about the instruction*<textarea name="message" rows="5" required=""></textarea></label><button class="button button--red" type="submit">Prepare enquiry <span class="arrow" aria-hidden="true"><span></span></span></button><p class="form-note">This opens your email application so you can review the enquiry before sending.</p></form></section></main><div class="team-modal" role="presentation" hidden=""><div class="team-modal__panel" role="dialog" id="valuation-team-dialog" aria-modal="true" aria-labelledby="team-dialog-title" aria-describedby="team-dialog-description"><div class="team-modal__header"><div><p class="section-label">National and specialist contacts</p><h2 id="team-dialog-title">Find the right valuer.</h2><p id="team-dialog-description">Confirmed national contacts are shown first. Specialist contact details will be added once approved.</p></div><button class="team-modal__close" type="button" aria-label="Close valuation contacts" data-team-close="true"><span aria-hidden="true"></span></button></div><div class="team-directory"><article class="team-card"><img src="https://www.lsh.co.uk/-/media/images/lsh/people/manchester/christiaan-flatley.jpg?rev=3860a58643a049858b5c5c3b3953a3b7" alt="Christiaan Flatley"/><div class="team-card__content"><span class="team-card__region">UK regions</span><h3>Christiaan Flatley</h3><p>Executive Director — Head of UK Regions, Valuation</p><div class="team-card__links"><a href="tel:07841684807">07841 684807</a><a href="mailto:CFlatley@lsh.co.uk">CFlatley@lsh.co.uk</a></div></div></article><article class="team-card"><img src="https://www.lsh.co.uk/-/media/images/lsh/people/london-we/oliver-leeming.jpg?rev=54bb77e088cb4c5e9900a75e382279b2" alt="Oliver Leeming"/><div class="team-card__content"><span class="team-card__region">National operations</span><h3>Oliver Leeming</h3><p>Executive Director — Head of Operations, Valuation</p><div class="team-card__links"><a href="tel:07725207641">07725 207 641</a><a href="mailto:OLeeming@lsh.co.uk">OLeeming@lsh.co.uk</a></div></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">KH</span><div class="team-card__content"><span class="team-card__region">Strategic specialism</span><h3>Ken Hogg</h3><p>Operational Real Estate</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">JR</span><div class="team-card__content"><span class="team-card__region">Public sector and NHS</span><h3>Jaspreet Rahi</h3><p>Asset Valuation Services</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">PM</span><div class="team-card__content"><span class="team-card__region">Operational real estate</span><h3>Phil Macauley</h3><p>Self Storage</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">NB</span><div class="team-card__content"><span class="team-card__region">LPA receivership</span><h3>Nick Blackwell</h3><p>Property Restructuring</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">MR</span><div class="team-card__content"><span class="team-card__region">Residential and BTR</span><h3>Matt Rothery</h3><p>London Residential Development</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">JB</span><div class="team-card__content"><span class="team-card__region">Residential and BTR</span><h3>James Beale</h3><p>London Residential</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">JD</span><div class="team-card__content"><span class="team-card__region">Commercial valuation</span><h3>Jennifer Dunn</h3><p>London Commercial</p><span class="team-card__pending">Direct details to be supplied</span></div></article><article class="team-card team-card--placeholder"><span class="team-card__portrait" aria-hidden="true">RL</span><div class="team-card__content"><span class="team-card__region">Quality and methodology</span><h3>Rachel Leggett</h3><p>Valuation Compliance Officer</p><span class="team-card__pending">Direct details to be supplied</span></div></article></div><div class="team-modal__footer"><p>Specialist details are held as placeholders until approved for publication.</p><button type="button" class="text-link" data-team-close="true">Return to the page <span class="arrow" aria-hidden="true"><span></span></span></button></div></div></div></div><script>
+<body>
+<div class="site">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content">
+<section class="hero" id="top" aria-labelledby="hero-title">
+<div class="hero__grid" aria-hidden="true">
+</div>
+<div class="hero__glow" aria-hidden="true">
+</div>
+<div class="hero__content" data-hero="content">
+<p class="eyebrow">LSH Valuation</p>
+<h1 id="hero-title">Valuation advice grounded in evidence. <span>Delivered across the UK.</span>
+</h1>
+<p class="hero__lede">RICS-registered valuers across 17 UK offices. Loan security, financial reporting, public sector and specialist valuations — backed by more than 5,900 instructions and £38bn in assets valued.</p>
+<div class="hero__actions">
+<a class="button button--red" href="#contact">Speak to a valuation specialist <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</a>
+<a class="text-link text-link--light" href="#services">Find the right service <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</a>
+</div>
+</div>
+<aside class="hero__side-note" data-hero="credential" aria-label="Valuation responsibility">
+<span class="hero__side-index">Named responsibility</span>
+<strong>One accountable valuer from instruction to delivery.</strong>
+<p>RICS Red Book compliant. Independently peer reviewed.</p>
+</aside>
+</section>
+<section class="evidence" aria-label="LSH Valuation at a glance">
+<div class="stat">
+<strong>
+<span aria-label="80+" data-counter-end="80" data-counter-prefix="" data-counter-suffix="+" data-counter-delay="0">0+</span>
+</strong>
+<span>RICS Registered Valuers</span>
+</div>
+<div class="stat">
+<strong>
+<span aria-label="2,000+" data-counter-end="2000" data-counter-prefix="" data-counter-suffix="+" data-counter-delay="180">0+</span>
+</strong>
+<span>bespoke reports annually</span>
+</div>
+<div class="stat">
+<strong>
+<span aria-label="17" data-counter-end="17" data-counter-prefix="" data-counter-suffix="" data-counter-delay="360">0</span>
+</strong>
+<span>UK offices</span>
+</div>
+<div class="stat">
+<strong>
+<span aria-label="£10bn+" data-counter-end="10" data-counter-prefix="£" data-counter-suffix="bn+" data-counter-delay="540">£0bn+</span>
+</strong>
+<span>valued annually</span>
+</div>
+<div class="stat stat--statement">
+<span>Panel-approved for major UK lenders</span>
+</div>
+</section>
+<nav class="section-nav" aria-label="On this page">
+<span class="section-nav__progress" aria-hidden="true">
+</span>
+<div>
+<a href="#audiences">Who we help</a>
+<a href="#services">Services</a>
+<a href="#sectors">Sectors</a>
+<a href="#quality">Quality</a>
+<a href="#experience">Experience</a>
+<a href="#faq">FAQs</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+<section class="audiences content-section" id="audiences" aria-labelledby="audiences-title" data-reveal="true">
+<header class="section-heading section-heading--split">
+<div>
+<p class="section-label">Start with your instruction</p>
+<span class="section-kicker">Who we help</span>
+</div>
+<div>
+<h2 id="audiences-title">The right route, from the outset.</h2>
+<p>Our practice covers every major instruction type, from single-asset loan security valuations to regulated purpose valuations, public sector asset registers and expert witness appointments.</p>
+</div>
+</header>
+<div class="audience-grid">
+<article class="audience-card" data-reveal-item="true">
+<span class="card-number">01</span>
+<h3>Lenders and banks</h3>
+<p>Loan security valuations for single assets, portfolios and complex lending decisions.</p>
+</article>
+<article class="audience-card" data-reveal-item="true">
+<span class="card-number">02</span>
+<h3>Investors and funds</h3>
+<p>Independent evidence for acquisition, reporting, strategy and portfolio review.</p>
+</article>
+<article class="audience-card" data-reveal-item="true">
+<span class="card-number">03</span>
+<h3>Corporates</h3>
+<p>Audit-ready valuations for accounts, governance and property-led decisions.</p>
+</article>
+<article class="audience-card" data-reveal-item="true">
+<span class="card-number">04</span>
+<h3>Public sector and NHS</h3>
+<p>Consistent asset register programmes across large and diverse estates.</p>
+</article>
+<article class="audience-card" data-reveal-item="true">
+<span class="card-number">05</span>
+<h3>Operators and developers</h3>
+<p>Sector-led analysis for trading assets, development and optimisation.</p>
+</article>
+</div>
+</section>
+<section class="services" id="services" aria-labelledby="services-title" data-reveal="true">
+<header class="section-heading section-heading--dark">
+<div>
+<p class="section-label">Core services</p>
+<span class="section-kicker">Nine routes to advice</span>
+</div>
+<div>
+<h2 id="services-title">Valuation expertise, matched to purpose.</h2>
+<p>Every instruction is led by a named RICS Registered Valuer, tracked from receipt to report delivery and subject to structured peer review.</p>
+</div>
+</header>
+<div class="service-grid">
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">01</span>
+<h3>Loan security</h3>
+<p>RICS Red Book compliant advice for lenders across every major asset class.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">02</span>
+<h3>Asset register</h3>
+<p>Auditable portfolio valuations for public bodies and complex estates.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">03</span>
+<h3>Regulated purpose valuation</h3>
+<p>Independent valuations for company accounts under IFRS and UK GAAP.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">04</span>
+<h3>Expert witness</h3>
+<p>Clear, evidence-led valuation opinion for disputes and legal proceedings.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">05</span>
+<h3>LPA receivership</h3>
+<p>Valuation and property strategy for lenders and insolvency practitioners.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">06</span>
+<h3>Development appraisal</h3>
+<p>Market-tested viability analysis for land and development decisions.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">07</span>
+<h3>Portfolio optimisation</h3>
+<p>Valuation-led analysis to identify risk, opportunity and next actions.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">08</span>
+<h3>Charities Act</h3>
+<p>Qualified valuation advice for charity property acquisitions and disposals.</p>
+</article>
+<article class="service-card" data-reveal-item="true">
+<span class="card-number">09</span>
+<h3>Auctions</h3>
+<p>Market-facing valuation insight supported by LSH&#x27;s national auctions team.</p>
+</article>
+</div>
+</section>
+<section class="specialisms content-section" aria-labelledby="specialisms-title" data-reveal="true">
+<header class="section-heading section-heading--split">
+<div>
+<p class="section-label">Strategic specialisms</p>
+<span class="section-kicker">Beyond the report</span>
+</div>
+<div>
+<h2 id="specialisms-title">Specialist advice for complex assets.</h2>
+<p>Where the instruction requires more than a valuation, our teams combine asset-class knowledge with advisory, transaction and portfolio expertise.</p>
+</div>
+</header>
+<div class="specialism-grid">
+<article class="specialism-card" data-reveal-item="true">
+<span class="card-number">01</span>
+<h3>Operational real estate</h3>
+<p>Valuation, M&amp;A advice, portfolio optimisation and transaction support for trading assets.</p>
+</article>
+<article class="specialism-card" data-reveal-item="true">
+<span class="card-number">02</span>
+<h3>Asset valuation services</h3>
+<p>Structured programmes for NHS bodies, local authorities and government agencies.</p>
+</article>
+<article class="specialism-card" data-reveal-item="true">
+<span class="card-number">03</span>
+<h3>Expert witness and Section 18</h3>
+<p>Defensible opinion for litigation, arbitration and statutory compensation matters.</p>
+</article>
+<article class="specialism-card" data-reveal-item="true">
+<span class="card-number">04</span>
+<h3>Residential and BTR</h3>
+<p>Residential valuation informed by specialist market teams and Connells Group data.</p>
+</article>
+</div>
+</section>
+<section class="sector-section content-section" id="sectors" aria-labelledby="sectors-title" data-reveal="true">
+<header class="section-heading section-heading--split section-heading--compact">
+<div>
+<p class="section-label">Sector intelligence</p>
+</div>
+<div>
+<h2 id="sectors-title">Direct experience in the asset class.</h2>
+<p>Every sector is supported by valuers with relevant transactional and market experience.</p>
+</div>
+</header>
+<div class="sector-grid">
+<article class="sector-card" data-reveal-item="true">
+<span>01</span>
+<h3>Residential and BTR</h3>
+<p>Homes, portfolios and purpose-built rental</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>02</span>
+<h3>Commercial</h3>
+<p>Offices, retail and industrial property</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>03</span>
+<h3>Operational real estate</h3>
+<p>Trading assets and operating businesses</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>04</span>
+<h3>Industrial and logistics</h3>
+<p>Warehousing, distribution and production</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>05</span>
+<h3>Retail</h3>
+<p>High street, retail parks and shopping centres</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>06</span>
+<h3>Healthcare</h3>
+<p>Care, clinical and specialist facilities</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>07</span>
+<h3>Education</h3>
+<p>Schools, colleges and universities</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>08</span>
+<h3>Land and development</h3>
+<p>Sites, viability and development value</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>09</span>
+<h3>Transport and infrastructure</h3>
+<p>Ports, airports and transport assets</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>10</span>
+<h3>Senior living</h3>
+<p>Retirement and later-living property</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>11</span>
+<h3>Student accommodation</h3>
+<p>PBSA schemes and portfolios</p>
+</article>
+<article class="sector-card" data-reveal-item="true">
+<span>12</span>
+<h3>Mixed use</h3>
+<p>Multi-sector assets and complex portfolios</p>
+</article>
+</div>
+</section>
+<section class="coverage" id="coverage" aria-labelledby="coverage-title" data-reveal="true">
+<div class="coverage__copy">
+<p class="section-label">National coverage</p>
+<h2 id="coverage-title">UK reach. Local market evidence.</h2>
+<p>Our valuation teams operate from 17 offices across England, Wales, Scotland and Northern Ireland. That gives us the reach to coordinate national portfolios and the local knowledge to value individual assets with precision.</p>
+<p>Whether the instruction covers one regional asset or a portfolio spanning the UK, it is led by a valuer who understands that market.</p>
+<p class="coverage__assurance">Seventeen connected offices, with every instruction led by a valuer who knows the local market.</p>
+<ul class="office-list" aria-label="LSH valuation office locations">
+<li>Belfast</li>
+<li>Birmingham</li>
+<li>Bristol</li>
+<li>Cambridge</li>
+<li>Cardiff</li>
+<li>Chelmsford</li>
+<li>Edinburgh</li>
+<li>Glasgow</li>
+<li>Leeds</li>
+<li>London</li>
+<li>Manchester</li>
+<li>Milton Keynes</li>
+<li>Newcastle</li>
+<li>Reading</li>
+<li>Sheffield</li>
+<li>Southampton</li>
+<li>Swansea</li>
+</ul>
+</div>
+<div class="coverage-map" role="img" aria-label="Map showing 17 LSH valuation offices across the United Kingdom">
+<svg viewBox="0 0 380 560" role="img" aria-hidden="true">
+<path class="coverage-map__land" fill-rule="evenodd" d="M199.9 451.3L197.9 453.2L191.7 455.2L189.1 457.2L184.4 461.7L183.5 462.1L176.4 461.0L171.2 455.1L167.8 452.7L166.5 452.4L165.0 453.2L162.0 453.9L158.9 453.8L160.4 451.1L162.6 449.5L157.8 448.5L156.4 447.7L154.9 445.8L151.1 445.4L149.3 445.9L146.2 448.4L141.4 451.1L135.6 447.4L134.4 445.8L134.4 442.6L133.6 440.1L132.0 439.3L134.0 436.0L136.5 433.9L142.0 431.7L150.3 426.6L155.0 424.5L159.3 420.7L161.1 418.4L162.4 415.3L163.7 411.5L165.5 408.4L163.7 407.6L162.9 405.3L163.1 402.9L164.0 400.8L163.2 398.2L161.9 395.4L162.0 393.2L162.3 390.9L159.0 391.1L155.7 391.8L152.6 393.4L149.7 395.6L147.1 396.0L147.2 394.3L148.3 392.1L151.2 389.0L154.4 386.4L155.5 384.4L156.4 382.1L158.0 380.3L162.1 376.8L170.0 372.9L171.2 372.6L174.3 373.1L177.3 372.5L180.0 371.1L182.6 370.8L188.6 374.9L186.8 368.6L189.5 367.1L193.3 372.7L194.7 373.3L197.7 372.5L196.6 371.6L195.2 371.5L193.4 370.7L191.9 368.8L189.5 363.1L189.6 359.6L191.3 356.1L193.1 352.8L191.6 352.2L190.3 350.9L190.0 347.6L190.5 344.7L193.8 342.2L194.8 338.3L195.2 334.0L194.6 332.1L191.3 332.4L189.7 333.2L188.3 334.4L186.8 334.4L182.7 329.6L180.4 326.1L176.3 318.5L175.7 314.0L179.0 304.3L184.1 298.0L190.2 295.9L189.0 295.4L179.8 295.4L176.8 296.1L173.9 298.7L172.3 299.4L170.7 299.7L169.1 301.0L167.6 302.8L166.1 303.9L163.0 303.6L161.5 304.0L160.4 302.9L159.5 301.3L158.4 300.8L157.0 301.3L154.3 303.6L151.4 304.9L148.0 303.5L143.6 300.8L142.7 301.8L141.7 304.3L141.1 308.2L138.0 304.8L135.3 300.3L134.4 297.5L134.3 294.3L135.8 293.1L137.4 294.2L139.7 286.7L144.5 276.9L146.1 274.0L147.3 270.3L147.1 267.8L146.0 265.7L141.7 261.0L141.7 257.2L142.2 252.9L143.4 250.3L143.9 249.8L149.7 249.9L147.4 248.5L142.9 244.6L143.0 243.2L144.0 239.6L143.6 240.0L142.6 241.6L140.7 245.7L139.6 246.6L136.4 247.6L135.8 249.6L135.3 250.1L133.7 250.3L133.2 252.2L132.9 252.3L132.4 250.3L132.4 247.0L133.0 243.9L134.2 241.5L138.9 236.1L136.6 237.8L131.4 242.8L128.8 246.1L128.1 247.2L127.9 248.2L127.9 249.2L129.1 255.0L128.7 257.7L124.3 275.5L123.4 277.3L122.6 278.2L121.9 278.4L119.7 278.1L118.7 276.7L118.7 275.2L119.1 273.0L121.0 264.5L121.8 262.2L123.0 260.0L125.6 256.2L125.6 256.0L123.8 256.7L123.1 256.5L122.5 255.7L122.9 244.4L124.3 240.7L124.8 235.3L126.1 230.7L127.5 227.3L128.6 223.0L130.2 221.1L130.6 218.1L132.5 214.9L133.9 211.6L133.1 212.0L124.1 220.6L121.7 222.2L118.6 221.8L116.2 220.8L114.3 218.7L113.5 214.8L111.1 214.7L109.2 214.0L109.2 213.5L111.7 211.4L115.9 210.6L119.7 207.2L116.3 204.9L116.6 204.1L119.6 202.2L123.3 195.6L124.1 189.5L122.3 186.6L121.6 184.7L118.0 182.7L117.4 180.0L117.8 178.5L119.0 177.0L120.8 175.9L123.6 174.8L121.1 173.7L120.1 172.3L119.4 170.3L119.3 169.1L120.6 164.0L121.4 161.9L122.9 159.2L129.7 159.4L130.5 158.2L131.2 158.1L134.7 159.2L134.2 158.0L128.5 151.6L128.0 150.4L129.6 147.0L129.7 145.4L129.5 143.8L130.0 142.5L131.8 141.9L137.3 142.0L138.6 141.4L138.0 139.7L136.7 137.6L136.5 135.7L136.8 134.1L136.8 130.8L137.1 129.4L138.4 127.2L139.5 126.6L140.8 126.2L143.8 126.9L145.0 127.8L146.3 129.9L147.2 129.7L151.0 127.5L152.1 127.1L153.7 129.7L160.1 127.7L168.7 126.7L173.8 125.4L179.3 124.9L184.4 123.3L189.8 124.0L190.0 124.9L189.7 126.2L188.3 129.6L188.5 133.4L188.2 134.6L187.6 136.0L185.6 138.7L180.4 142.5L170.9 151.2L165.3 155.6L164.5 157.7L164.1 160.6L167.4 161.1L168.7 162.1L167.9 163.6L162.9 168.7L161.5 173.4L165.3 173.2L168.4 172.3L174.7 169.4L180.6 167.3L183.5 167.2L189.0 168.9L190.2 169.0L192.6 168.2L194.9 168.0L210.9 168.6L215.4 167.6L218.3 168.8L220.8 171.8L223.1 177.3L223.1 178.2L221.7 180.7L219.0 183.9L216.8 188.3L216.1 190.6L215.7 193.2L215.0 195.5L210.5 206.7L206.2 212.9L204.2 217.3L201.8 220.8L199.5 223.0L197.0 224.5L189.9 226.0L187.9 227.2L185.5 229.1L183.0 230.0L186.0 229.9L188.9 228.8L194.2 228.4L200.2 232.1L199.7 235.2L197.2 237.6L191.7 237.9L186.5 243.3L184.2 244.9L181.7 245.7L178.6 245.5L173.0 244.0L170.5 242.6L172.7 245.0L175.3 246.3L189.9 249.2L190.8 248.9L195.4 245.8L201.6 245.7L213.5 251.5L216.9 256.0L221.8 262.3L224.4 264.8L226.3 267.0L227.5 270.4L229.8 281.6L232.4 292.4L235.9 304.2L237.4 307.5L239.5 309.8L249.8 315.1L252.1 316.8L256.1 321.9L260.0 327.3L263.6 331.5L267.5 334.8L265.6 336.6L264.3 339.3L265.2 343.1L266.8 346.6L269.9 352.3L272.7 358.6L271.7 357.6L270.6 357.1L269.2 357.3L267.7 357.0L265.1 355.0L262.6 352.6L257.6 353.6L254.8 353.1L252.4 353.2L257.0 354.6L262.0 354.7L273.0 365.1L276.8 371.3L279.0 379.5L277.5 383.2L275.1 385.6L272.9 388.3L270.9 391.4L277.0 395.9L278.3 395.8L279.7 395.2L281.0 393.6L283.2 389.9L284.3 388.5L288.1 388.1L291.3 388.3L294.5 389.2L297.3 388.9L302.9 390.5L305.8 392.0L313.0 398.5L314.6 402.1L315.3 406.7L315.4 411.8L314.2 416.5L312.8 420.7L311.9 426.1L311.3 428.1L310.5 429.6L306.7 433.9L304.1 435.7L303.1 434.9L301.9 435.0L301.8 436.0L303.0 438.2L303.0 440.9L300.8 442.8L298.5 443.7L294.7 442.6L289.3 446.3L293.2 448.2L293.9 450.2L293.0 453.7L290.6 455.2L287.9 455.9L285.2 456.1L282.9 456.9L280.8 458.6L283.5 457.7L285.4 458.5L286.6 461.4L287.6 462.3L292.9 463.6L296.2 463.5L302.6 462.8L305.6 462.8L306.7 463.4L306.7 465.8L306.2 471.8L305.4 473.1L297.0 478.1L295.3 481.7L294.8 483.8L289.9 483.4L287.6 485.7L283.6 487.2L280.5 488.8L277.5 490.8L275.0 491.4L264.3 489.0L257.9 489.2L249.1 491.3L246.9 490.9L243.5 488.9L240.0 487.6L236.0 487.0L232.6 485.1L234.7 488.7L230.0 492.1L227.8 492.8L225.5 492.7L220.8 493.6L216.5 493.1L217.2 495.6L218.3 497.7L217.4 498.6L216.4 498.9L208.2 497.3L207.0 497.6L206.0 499.0L203.0 498.2L200.1 495.7L197.0 494.1L193.8 493.3L191.2 493.6L180.6 497.5L178.5 501.4L177.4 507.0L175.9 512.0L173.4 515.8L170.4 516.3L167.6 513.7L162.3 510.7L160.5 508.8L159.9 508.6L159.3 509.4L157.2 510.2L155.1 510.3L151.7 511.1L145.9 513.4L143.6 515.1L138.6 519.5L137.5 520.7L135.7 525.2L132.9 526.0L130.4 523.1L127.5 522.1L124.4 523.1L122.5 524.6L121.7 523.4L121.6 520.8L123.9 517.8L129.9 515.5L135.1 509.6L137.7 505.9L138.7 503.9L140.0 502.6L141.6 502.1L142.5 499.8L149.7 490.8L150.3 488.7L150.7 485.0L151.3 481.4L157.2 479.1L160.1 471.5L160.8 470.9L169.1 469.6L175.3 469.7L181.3 471.1L184.5 471.3L187.6 470.8L190.1 468.7L194.3 461.4L196.6 458.2L199.3 455.3L201.9 451.9L206.0 445.8L203.2 447.9L199.9 451.3ZM159.8 372.0L160.9 372.9L163.7 372.7L162.8 374.7L159.7 376.8L157.7 379.0L155.2 380.7L154.0 378.7L152.6 378.8L150.5 374.8L150.1 369.0L152.9 367.4L156.7 367.5L159.8 372.0ZM203.0 96.2L200.0 96.3L201.5 93.5L203.3 92.8L206.7 93.1L206.1 94.4L203.0 96.2ZM242.4 36.4L241.7 36.9L239.2 32.2L241.1 26.7L243.3 26.9L243.7 28.3L243.5 29.6L242.3 29.7L242.2 30.1L242.6 32.7L242.6 35.6L242.4 36.4ZM235.4 35.3L236.0 38.5L237.3 37.7L239.4 40.8L240.4 40.8L242.1 39.6L241.8 42.5L240.0 50.7L239.5 52.1L239.2 54.5L238.8 55.0L238.3 60.0L237.1 61.7L236.1 65.6L235.7 66.0L234.2 64.5L235.7 58.5L236.3 55.0L235.9 53.2L235.0 51.5L232.8 51.5L230.9 52.2L230.5 51.3L230.4 50.0L230.0 49.6L227.5 49.6L226.7 49.3L226.2 48.1L226.1 47.1L228.4 46.4L230.6 46.7L233.7 44.8L231.7 38.5L229.1 37.9L228.5 37.3L229.0 36.2L230.5 35.6L232.7 32.4L234.0 31.9L235.6 32.0L235.4 35.3ZM249.4 22.4L249.4 23.0L248.0 26.9L248.1 28.4L245.9 28.3L245.5 27.8L245.1 25.5L245.4 23.1L245.7 22.5L246.3 22.3L247.0 22.7L248.1 21.5L248.7 21.5L249.4 22.4ZM186.8 116.6L185.3 117.2L183.9 117.2L181.6 114.5L180.7 112.5L180.8 111.2L181.8 110.8L184.0 111.4L185.2 113.7L185.3 115.1L185.6 115.7L187.0 116.3L186.8 116.6ZM193.0 119.1L192.8 119.2L191.8 118.3L190.2 115.3L192.7 114.7L193.9 115.0L193.4 116.4L193.0 119.1ZM189.7 105.6L189.3 106.8L191.3 106.7L194.2 107.7L195.9 107.8L197.4 109.1L196.6 111.3L195.7 112.0L194.7 112.1L191.3 109.8L186.8 110.8L185.9 110.5L185.3 109.9L185.1 109.1L185.1 107.5L184.8 107.0L183.2 108.5L182.5 108.3L182.1 107.6L181.9 106.1L182.1 104.0L183.0 100.9L184.7 100.3L187.1 100.6L189.8 102.4L190.7 103.5L190.6 104.3L189.7 105.6ZM198.2 98.3L196.0 99.4L195.0 98.5L194.8 95.5L192.1 94.2L190.8 93.4L189.8 91.9L190.1 91.4L191.8 90.8L194.8 93.5L196.0 95.8L198.2 96.4L198.5 96.8L198.2 98.3ZM96.8 219.7L95.3 220.0L95.2 219.3L97.7 216.1L99.4 215.6L100.0 215.9L98.8 217.8L96.8 219.7ZM136.1 272.7L132.8 272.8L131.6 272.4L130.1 271.2L128.5 264.8L129.1 262.5L129.8 261.4L130.5 260.6L132.2 260.2L134.0 261.4L134.6 262.5L136.1 266.9L136.3 270.6L136.1 272.7ZM118.5 230.9L108.0 233.5L104.5 233.3L104.1 232.0L104.8 231.2L107.8 230.3L109.0 224.1L104.5 221.2L104.3 220.4L104.6 219.1L105.2 218.4L107.9 217.0L109.0 216.7L110.0 216.9L111.9 218.5L114.0 222.1L116.9 222.6L118.9 224.1L118.5 230.9ZM109.3 250.2L110.2 256.2L111.1 259.9L111.2 261.2L110.3 263.0L106.0 265.3L104.7 265.3L104.6 264.8L105.6 262.4L104.8 259.7L105.2 257.6L104.8 257.2L103.9 257.5L100.8 260.8L99.8 261.1L99.7 260.5L100.4 257.8L100.5 255.9L101.0 254.8L101.8 253.8L102.8 253.0L103.6 252.9L104.5 253.7L107.0 251.5L109.3 250.2ZM113.4 255.7L112.9 256.2L111.6 256.0L111.1 255.3L110.8 254.1L110.8 252.0L111.6 250.5L115.0 248.2L113.4 247.4L113.4 246.8L114.2 244.9L117.9 241.9L118.9 241.4L119.8 241.5L118.0 246.7L113.4 255.7ZM107.5 136.7L104.1 144.9L102.8 145.1L101.7 147.1L98.1 149.3L101.2 149.4L102.1 150.1L102.1 151.7L101.5 152.7L97.5 156.4L94.8 157.8L91.8 161.7L90.3 161.8L88.8 164.2L87.6 165.3L86.9 165.3L86.1 164.8L84.3 162.4L87.6 160.0L87.9 158.6L90.2 157.2L90.0 156.8L86.4 154.8L85.0 153.5L85.1 152.8L86.9 151.3L86.0 151.1L85.5 150.3L84.5 150.0L84.2 149.2L84.0 147.2L84.3 145.2L85.3 144.3L85.7 143.3L86.2 143.0L87.8 143.5L89.5 145.1L91.4 144.5L93.6 144.8L93.7 144.4L92.0 140.4L92.3 139.6L93.2 138.7L98.4 135.8L104.9 131.0L106.4 130.2L106.9 130.9L107.6 133.4L107.5 136.7ZM105.4 202.0L104.6 202.6L103.6 202.5L102.6 201.7L101.3 199.5L104.2 198.0L105.4 198.9L105.8 199.9L105.8 201.0L105.4 202.0ZM108.9 176.8L108.8 178.8L108.4 181.3L109.0 183.8L109.1 185.7L110.2 186.3L110.9 187.1L115.8 188.0L120.3 187.8L121.2 188.5L121.3 189.7L120.6 191.1L118.0 193.5L114.9 197.4L114.0 198.2L113.0 198.3L112.3 197.9L111.8 190.9L108.4 191.8L105.7 191.7L104.2 190.9L103.2 189.3L101.1 185.1L95.0 183.4L93.3 181.1L92.7 179.7L93.0 178.9L94.2 177.2L95.8 177.8L96.8 177.4L97.4 176.7L97.4 176.0L96.6 174.5L96.5 174.1L102.7 172.2L103.3 169.2L104.6 169.0L106.2 169.9L108.3 173.0L108.9 176.8ZM81.1 168.5L84.1 171.1L81.7 175.4L78.1 175.4L73.0 172.2L73.0 171.6L73.4 170.6L74.2 169.9L75.0 169.7L76.2 170.2L78.0 169.4L79.4 169.7L81.1 168.5ZM79.9 195.0L78.8 195.2L77.4 195.0L76.5 194.2L75.6 191.4L75.4 189.6L75.8 186.4L75.7 182.5L78.7 182.4L79.5 183.0L80.0 194.4L79.9 195.0ZM75.6 201.9L73.3 202.6L72.4 202.2L72.3 201.6L72.8 200.0L74.6 199.4L75.8 200.3L76.0 201.1L75.6 201.9ZM106.9 336.2L104.7 335.9L103.1 336.7L102.1 337.5L101.1 337.4L98.3 337.7L95.6 337.6L95.3 336.4L95.7 332.7L95.1 331.7L92.6 331.2L91.7 330.3L90.2 327.8L89.9 326.6L89.7 325.0L88.2 322.9L86.3 321.4L85.2 321.3L83.0 323.7L81.2 326.2L81.8 327.5L82.4 329.2L81.4 330.3L78.5 333.1L78.0 334.1L77.2 334.7L75.8 333.9L72.2 334.1L70.6 333.6L68.7 331.6L64.1 330.3L63.3 327.1L62.5 326.5L57.2 321.0L56.5 319.2L57.2 318.1L59.2 316.4L65.7 313.7L66.7 312.6L67.0 311.6L65.0 310.5L63.3 309.3L62.7 308.4L62.7 307.7L63.6 306.8L65.6 306.8L67.2 307.2L68.4 306.4L70.6 305.5L72.1 304.5L73.3 301.8L74.7 299.4L74.8 298.1L76.0 293.5L76.6 292.4L80.8 289.4L81.8 291.0L83.9 291.4L85.7 289.9L87.9 285.1L89.4 284.9L91.1 285.2L94.4 284.6L100.2 282.4L102.8 282.4L106.5 283.5L109.3 283.5L111.7 286.9L113.0 292.3L116.1 297.6L120.1 302.2L120.2 305.0L118.8 306.5L115.8 308.4L115.8 310.4L117.8 309.4L119.5 308.9L123.6 309.4L125.0 311.4L126.0 314.5L126.5 317.0L126.2 319.7L125.1 318.9L123.9 316.4L122.7 315.3L121.3 314.7L121.9 318.0L121.7 322.5L122.3 322.9L124.2 323.0L122.9 327.6L120.3 328.9L117.2 329.3L116.5 331.0L115.9 333.1L114.3 336.2L112.2 337.9L109.5 337.6L106.9 336.2ZM241.8 494.8L239.6 496.4L238.9 498.3L238.4 499.0L236.9 499.5L235.5 499.5L230.0 495.7L228.8 495.9L230.0 494.2L233.4 492.8L235.3 490.9L239.7 492.7L241.8 494.8Z">
+</path>
+<g class="coverage-map__pin" style="--pin-delay:0ms" data-office="Belfast">
+<circle class="coverage-map__pulse" cx="114.5" cy="312.5" r="8">
+</circle>
+<circle cx="114.5" cy="312.5" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:55ms" data-office="Birmingham">
+<circle class="coverage-map__pulse" cx="220.2" cy="411.0" r="8">
+</circle>
+<circle cx="220.2" cy="411.0" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:110ms" data-office="Bristol">
+<circle class="coverage-map__pulse" cx="201.9" cy="459.1" r="8">
+</circle>
+<circle cx="201.9" cy="459.1" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:165ms" data-office="Cambridge">
+<circle class="coverage-map__pulse" cx="272.9" cy="424.1" r="8">
+</circle>
+<circle cx="272.9" cy="424.1" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:220ms" data-office="Cardiff">
+<circle class="coverage-map__pulse" cx="186.5" cy="457.9" r="8">
+</circle>
+<circle cx="186.5" cy="457.9" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:275ms" data-office="Chelmsford">
+<circle class="coverage-map__pulse" cx="281.9" cy="446.0" r="8">
+</circle>
+<circle cx="281.9" cy="446.0" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:330ms" data-office="Edinburgh">
+<circle class="coverage-map__pulse" cx="186.2" cy="249.2" r="8">
+</circle>
+<circle cx="186.2" cy="249.2" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:385ms" data-office="Glasgow">
+<circle class="coverage-map__pulse" cx="158.4" cy="253.3" r="8">
+</circle>
+<circle cx="158.4" cy="253.3" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:440ms" data-office="Leeds">
+<circle class="coverage-map__pulse" cx="229.1" cy="349.6" r="8">
+</circle>
+<circle cx="229.1" cy="349.6" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:495ms" data-office="London">
+<circle class="coverage-map__pulse" cx="266.3" cy="456.7" r="8">
+</circle>
+<circle cx="266.3" cy="456.7" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:550ms" data-office="Manchester">
+<circle class="coverage-map__pulse" cx="211.0" cy="364.6" r="8">
+</circle>
+<circle cx="211.0" cy="364.6" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:605ms" data-office="Milton Keynes">
+<circle class="coverage-map__pulse" cx="249.8" cy="431.8" r="8">
+</circle>
+<circle cx="249.8" cy="431.8" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:660ms" data-office="Newcastle">
+<circle class="coverage-map__pulse" cx="227.3" cy="294.7" r="8">
+</circle>
+<circle cx="227.3" cy="294.7" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:715ms" data-office="Reading">
+<circle class="coverage-map__pulse" cx="244.1" cy="459.1" r="8">
+</circle>
+<circle cx="244.1" cy="459.1" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:770ms" data-office="Sheffield">
+<circle class="coverage-map__pulse" cx="231.2" cy="369.2" r="8">
+</circle>
+<circle cx="231.2" cy="369.2" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:825ms" data-office="Southampton">
+<circle class="coverage-map__pulse" cx="232.9" cy="484.5" r="8">
+</circle>
+<circle cx="232.9" cy="484.5" r="4">
+</circle>
+</g>
+<g class="coverage-map__pin" style="--pin-delay:880ms" data-office="Swansea">
+<circle class="coverage-map__pulse" cx="166.5" cy="451.3" r="8">
+</circle>
+<circle cx="166.5" cy="451.3" r="4">
+</circle>
+</g>
+</svg>
+<span class="coverage-map__count">17 <small>offices</small>
+</span>
+</div>
+</section>
+<section class="lender" aria-labelledby="lender-title" data-reveal="true">
+<div class="lender__intro">
+<p class="section-label">Lender assurance</p>
+<h2 id="lender-title">Built for lending decisions.</h2>
+<p>More than 60% of our instructions are for banks, building societies and specialist lenders. Our loan security valuations are RICS Red Book compliant, peer reviewed and delivered by named valuers with relevant asset and market experience.</p>
+<p class="lender__credential">Loan security · RICS Red Book compliant</p>
+</div>
+<div class="panel-network" aria-label="Valuation panel management platforms">
+<p>Instructed through leading panel managers</p>
+<div class="panel-logos">
+<span>
+<strong>VAS</strong>
+<small>GROUP</small>
+</span>
+<span>
+<strong>CVN</strong>
+</span>
+<span>
+<strong>METHOD</strong>
+</span>
+<span>
+<strong>Appraisers</strong>
+<small>UK</small>
+</span>
+</div>
+</div>
+</section>
+<section class="quality content-section" id="quality" aria-labelledby="quality-title" data-reveal="true">
+<header class="section-heading section-heading--split">
+<div>
+<p class="section-label">Quality and methodology</p>
+<span class="section-kicker">Defensible by design</span>
+</div>
+<div>
+<h2 id="quality-title">Rigour at every stage.</h2>
+<p>Every report is checked before issue. Higher-value instructions receive additional independent scrutiny.</p>
+</div>
+</header>
+<div class="quality-grid">
+<article data-reveal-item="true">
+<span>Every report</span>
+<strong>Peer reviewed</strong>
+<p>A qualified checker reviews the evidence, analysis and report before delivery.</p>
+</article>
+<article data-reveal-item="true">
+<span>£10m+</span>
+<strong>Second review</strong>
+<p>An independent, out-of-office checker provides a further level of scrutiny.</p>
+</article>
+<article data-reveal-item="true">
+<span>£20m+</span>
+<strong>Third-level check</strong>
+<p>A further review is required for the practice’s highest-value instructions.</p>
+</article>
+</div>
+<ol class="process-list" aria-label="Six-step valuation process">
+<li data-reveal-item="true">
+<span>01</span>
+<strong>Instruct</strong>
+</li>
+<li data-reveal-item="true">
+<span>02</span>
+<strong>Inspect</strong>
+</li>
+<li data-reveal-item="true">
+<span>03</span>
+<strong>Research</strong>
+</li>
+<li data-reveal-item="true">
+<span>04</span>
+<strong>Analyse</strong>
+</li>
+<li data-reveal-item="true">
+<span>05</span>
+<strong>Review</strong>
+</li>
+<li data-reveal-item="true">
+<span>06</span>
+<strong>Deliver</strong>
+</li>
+</ol>
+<p class="quality__assurance">Six documented stages · Independent review before issue</p>
+</section>
+<section class="experience" id="experience" aria-labelledby="experience-title" data-reveal="true">
+<header class="section-heading section-heading--light">
+<div>
+<p class="section-label">Recent instructions</p>
+<span class="section-kicker">Anonymised pending client approval</span>
+</div>
+<div>
+<h2 id="experience-title">Evidence at scale.</h2>
+<p>Recent instructions across lending, public sector and expert evidence.</p>
+</div>
+</header>
+<div class="case-grid">
+<article class="case-card" data-reveal-item="true">
+<div class="case-card__top">
+<span>Loan security · Operational real estate</span>
+<span>01</span>
+</div>
+<strong class="case-card__value">£93m</strong>
+<h3>Major London leisure complex</h3>
+<p>Loan security valuation of a combined casino and cinema venue for a major UK bank.</p>
+</article>
+<article class="case-card" data-reveal-item="true">
+<div class="case-card__top">
+<span>Asset register · Public sector</span>
+<span>02</span>
+</div>
+<strong class="case-card__value">870</strong>
+<h3>Properties across a London borough</h3>
+<p>A coordinated asset register valuation spanning a diverse local authority estate.</p>
+</article>
+<article class="case-card" data-reveal-item="true">
+<div class="case-card__top">
+<span>Expert witness · Commercial</span>
+<span>03</span>
+</div>
+<strong class="case-card__value">£105.5m</strong>
+<h3>Major London office building</h3>
+<p>Independent valuation evidence prepared for legal proceedings.</p>
+</article>
+</div>
+<a class="text-link experience__link" href="https://www.lsh.co.uk/explore/work?action=search&amp;service=1e58eec504bf40ce94171ab2bc8ee879" target="_top">View valuation experience <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</a>
+</section>
+<section class="insights content-section" aria-labelledby="insights-title" data-reveal="true">
+<header class="section-heading section-heading--split section-heading--compact">
+<div>
+<p class="section-label">Market intelligence</p>
+</div>
+<div>
+<h2 id="insights-title">Current insight, applied to value.</h2>
+</div>
+</header>
+<div class="insight-list">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/july/q2-investment-top-heavy-amid-geopolitical-challenges" target="_top">
+<span class="insight-list__index">01</span>
+<span class="insight-list__meta">Research<small>July 2026</small>
+</span>
+<strong>Q2 investment ‘Top Heavy’ amid geopolitical challenges</strong>
+<span class="insight-list__arrow">
+<span class="arrow arrow--diagonal" aria-hidden="true">
+<span>
+</span>
+</span>
+</span>
+</a>
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/may/live-and-kicking---lsh-build-to-rent-report-2026" target="_top">
+<span class="insight-list__index">02</span>
+<span class="insight-list__meta">Research<small>May 2026</small>
+</span>
+<strong>Live &amp; Kicking: LSH Build to Rent Report 2026</strong>
+<span class="insight-list__arrow">
+<span class="arrow arrow--diagonal" aria-hidden="true">
+<span>
+</span>
+</span>
+</span>
+</a>
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/news/2026/june/philip-macauley-joins-lsh-to-expand-self-storage-valuation-and-consultancy-offering" target="_top">
+<span class="insight-list__index">03</span>
+<span class="insight-list__meta">News<small>June 2026</small>
+</span>
+<strong>LSH expands its self storage valuation and consultancy offering</strong>
+<span class="insight-list__arrow">
+<span class="arrow arrow--diagonal" aria-hidden="true">
+<span>
+</span>
+</span>
+</span>
+</a>
+</div>
+<a class="text-link insights__link" href="https://www.lsh.co.uk/explore/research-and-views" target="_top">Explore all LSH research and views <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</a>
+</section>
+<section class="faq" id="faq" aria-labelledby="faq-title" data-reveal="true">
+<div class="faq__intro">
+<p class="section-label">Frequently asked questions</p>
+<h2 id="faq-title">Before you instruct.</h2>
+<p>Clear answers on scope, standards and delivery.</p>
+</div>
+<div class="faq-list">
+<details data-reveal-item="true">
+<summary>
+<span>01</span>
+<strong>What types of valuation do you carry out?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>We carry out the full range of RICS-recognised valuation purposes, including loan security, regulated purpose valuations for company accounts, asset register valuations, expert witness appointments, LPA receivership, development appraisal and portfolio optimisation. Every valuation is prepared by a named RICS Registered Valuer and is RICS Red Book compliant.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>02</span>
+<strong>Are your valuers RICS registered?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Yes. Our team includes more than 80 RICS Registered Valuers operating from 17 offices across the UK. Every valuation report is signed by a named RICS Registered Valuer who has personally inspected the property.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>03</span>
+<strong>Are you on lender panels?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Yes. We are panel-approved for major UK lenders and are instructed through leading valuation panel management platforms including VAS Group, CVN, Method and Appraisers UK. More than 60% of our instructions are for banks, building societies and specialist lenders.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>04</span>
+<strong>How do you ensure the quality of your valuations?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Every LSH valuation follows a structured six-step process. Every report is reviewed by a qualified checker before issue. Instructions above £10m require a second independent review; those above £20m require a third-level check.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>05</span>
+<strong>Do you carry out portfolio valuations?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Yes. Our instructions range from single assets to multi-property portfolios of more than 800 properties, coordinated across multiple asset types, sectors and UK regions.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>06</span>
+<strong>Which sectors do you cover?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Our practice covers 14 property sectors, including residential and BTR, offices, retail, industrial and logistics, operational real estate, land and development, education, transport and infrastructure, senior living and student accommodation.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>07</span>
+<strong>Can you provide valuations for financial reporting purposes?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Yes. We carry out regulated purpose valuations for company accounts under IFRS and UK GAAP, including IAS16 and IFRS16 valuations for listed companies, REITs and public sector bodies. Every regulated purpose valuation is RICS Red Book compliant and peer reviewed.</p>
+</details>
+<details data-reveal-item="true">
+<summary>
+<span>08</span>
+<strong>How do I instruct LSH for a valuation?</strong>
+<i aria-hidden="true">
+</i>
+</summary>
+<p>Complete the enquiry form below or contact one of our national specialists. We will confirm the scope, purpose and parties, issue Terms of Engagement and assign a named RICS Registered Valuer.</p>
+</details>
+</div>
+</section>
+<section class="contact" id="contact" aria-labelledby="contact-title" data-reveal="true">
+<div class="contact__lead">
+<p class="section-label">Start an instruction</p>
+<h2 id="contact-title">Speak to our valuation team.</h2>
+<p>Whether you have a specific instruction in mind or are evaluating LSH as a panel valuer, our national specialists are ready to help.</p>
+<button type="button" class="button button--light" aria-haspopup="dialog" aria-expanded="false" aria-controls="valuation-team-dialog" data-team-open="true">View valuation contacts <span class="arrow arrow--diagonal" aria-hidden="true">
+<span>
+</span>
+</span>
+</button>
+<div class="contact__people">
+<article class="person" data-reveal-item="true">
+<img src="https://www.lsh.co.uk/-/media/images/lsh/people/manchester/christiaan-flatley.jpg?rev=3860a58643a049858b5c5c3b3953a3b7" alt="Christiaan Flatley" width="224" height="232" loading="lazy" decoding="async"/>
+<div>
+<p>Christiaan Flatley</p>
+<span>Executive Director — Head of UK Regions, Valuation</span>
+<div class="person__links">
+<a href="tel:07841684807">07841 684807</a>
+<a href="mailto:CFlatley@lsh.co.uk">CFlatley@lsh.co.uk</a>
+</div>
+</div>
+</article>
+<article class="person" data-reveal-item="true">
+<img src="https://www.lsh.co.uk/-/media/images/lsh/people/london-we/oliver-leeming.jpg?rev=54bb77e088cb4c5e9900a75e382279b2" alt="Oliver Leeming" width="224" height="232" loading="lazy" decoding="async"/>
+<div>
+<p>Oliver Leeming</p>
+<span>Executive Director — Head of Operations, Valuation</span>
+<div class="person__links">
+<a href="tel:07725207641">07725 207 641</a>
+<a href="mailto:OLeeming@lsh.co.uk">OLeeming@lsh.co.uk</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<form class="enquiry-form">
+<div class="form-row">
+<label>Name*<input autoComplete="name" required="" name="name"/>
+</label>
+<label>Company<input autoComplete="organization" name="company"/>
+</label>
+</div>
+<div class="form-row">
+<label>Email*<input type="email" autoComplete="email" required="" name="email"/>
+</label>
+<label>Telephone<input type="tel" autoComplete="tel" name="telephone"/>
+</label>
+</div>
+<label>Tell us about the instruction*<textarea name="message" rows="5" required="">
+</textarea>
+</label>
+<button class="button button--red" type="submit">Prepare enquiry <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</button>
+<p class="form-note">This opens your email application so you can review the enquiry before sending.</p>
+</form>
+</section>
+</main>
+<div class="team-modal" role="presentation" hidden="">
+<div class="team-modal__panel" role="dialog" id="valuation-team-dialog" aria-modal="true" aria-labelledby="team-dialog-title" aria-describedby="team-dialog-description">
+<div class="team-modal__header">
+<div>
+<p class="section-label">National and specialist contacts</p>
+<h2 id="team-dialog-title">Find the right valuer.</h2>
+<p id="team-dialog-description">Confirmed national contacts are shown first. Specialist contact details will be added once approved.</p>
+</div>
+<button class="team-modal__close" type="button" aria-label="Close valuation contacts" data-team-close="true">
+<span aria-hidden="true">
+</span>
+</button>
+</div>
+<div class="team-directory">
+<article class="team-card">
+<img src="https://www.lsh.co.uk/-/media/images/lsh/people/manchester/christiaan-flatley.jpg?rev=3860a58643a049858b5c5c3b3953a3b7" alt="Christiaan Flatley" width="224" height="232" loading="lazy" decoding="async"/>
+<div class="team-card__content">
+<span class="team-card__region">UK regions</span>
+<h3>Christiaan Flatley</h3>
+<p>Executive Director — Head of UK Regions, Valuation</p>
+<div class="team-card__links">
+<a href="tel:07841684807">07841 684807</a>
+<a href="mailto:CFlatley@lsh.co.uk">CFlatley@lsh.co.uk</a>
+</div>
+</div>
+</article>
+<article class="team-card">
+<img src="https://www.lsh.co.uk/-/media/images/lsh/people/london-we/oliver-leeming.jpg?rev=54bb77e088cb4c5e9900a75e382279b2" alt="Oliver Leeming" width="224" height="232" loading="lazy" decoding="async"/>
+<div class="team-card__content">
+<span class="team-card__region">National operations</span>
+<h3>Oliver Leeming</h3>
+<p>Executive Director — Head of Operations, Valuation</p>
+<div class="team-card__links">
+<a href="tel:07725207641">07725 207 641</a>
+<a href="mailto:OLeeming@lsh.co.uk">OLeeming@lsh.co.uk</a>
+</div>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">KH</span>
+<div class="team-card__content">
+<span class="team-card__region">Strategic specialism</span>
+<h3>Ken Hogg</h3>
+<p>Operational Real Estate</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">JR</span>
+<div class="team-card__content">
+<span class="team-card__region">Public sector and NHS</span>
+<h3>Jaspreet Rahi</h3>
+<p>Asset Valuation Services</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">PM</span>
+<div class="team-card__content">
+<span class="team-card__region">Operational real estate</span>
+<h3>Phil Macauley</h3>
+<p>Self Storage</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">NB</span>
+<div class="team-card__content">
+<span class="team-card__region">LPA receivership</span>
+<h3>Nick Blackwell</h3>
+<p>Property Restructuring</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">MR</span>
+<div class="team-card__content">
+<span class="team-card__region">Residential and BTR</span>
+<h3>Matt Rothery</h3>
+<p>London Residential Development</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">JB</span>
+<div class="team-card__content">
+<span class="team-card__region">Residential and BTR</span>
+<h3>James Beale</h3>
+<p>London Residential</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">JD</span>
+<div class="team-card__content">
+<span class="team-card__region">Commercial valuation</span>
+<h3>Jennifer Dunn</h3>
+<p>London Commercial</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">RL</span>
+<div class="team-card__content">
+<span class="team-card__region">Quality and methodology</span>
+<h3>Rachel Leggett</h3>
+<p>Valuation Compliance Officer</p>
+<span class="team-card__pending">Direct details to be supplied</span>
+</div>
+</article>
+</div>
+<div class="team-modal__footer">
+<p>Specialist details are held as placeholders until approved for publication.</p>
+<button type="button" class="text-link" data-team-close="true">Return to the page <span class="arrow" aria-hidden="true">
+<span>
+</span>
+</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
 (() => {
   const site = document.querySelector('.site');
   if (!site) return;
@@ -2547,5 +3397,6 @@ button:focus-visible .arrow--diagonal {
     new ResizeObserver(report).observe(site);
     report();
   }
-})();</script></body>
+})();</script>
+</body>
 </html>
