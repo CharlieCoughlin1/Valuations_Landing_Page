@@ -205,6 +205,19 @@
   color: var(--lsh-gold-light);
 }
 
+.page-section--dark .feature-card {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.page-section--dark .feature-card h3 {
+  color: #fff;
+}
+
+.page-section--dark .feature-card p {
+  color: rgba(255, 255, 255, 0.66);
+}
+
 .page-section__heading {
   display: grid;
   grid-template-columns: minmax(190px, 0.5fr) minmax(0, 1.5fr);
@@ -462,6 +475,17 @@ a.feature-card:focus-visible {
   margin-bottom: 4px;
   color: var(--lsh-navy);
   font-weight: 700;
+}
+
+.page-section--dark .pending-note,
+.page-section--dark .approval-note {
+  background: rgba(200, 160, 50, 0.13);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-section--dark .pending-note strong,
+.page-section--dark .approval-note strong {
+  color: var(--lsh-gold-light);
 }
 
 .download-card {
