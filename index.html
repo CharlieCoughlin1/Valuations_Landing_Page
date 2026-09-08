@@ -715,6 +715,23 @@ button:focus-visible .arrow--diagonal {
   color: rgba(255, 255, 255, 0.61);
 }
 
+.card-status {
+  display: block;
+  max-width: 230px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--lsh-red);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-card .card-status {
+  color: var(--lsh-gold-light);
+}
+
 .specialisms {
   padding: 124px 0 116px;
 }
@@ -1155,6 +1172,8 @@ button:focus-visible .arrow--diagonal {
   min-height: 390px;
   padding: 28px 30px 35px;
   border-right: 1px solid rgba(255, 255, 255, 0.14);
+  color: inherit;
+  text-decoration: none;
 }
 
 .case-card:last-child {
@@ -1193,6 +1212,16 @@ button:focus-visible .arrow--diagonal {
 
 .case-card p {
   color: rgba(255, 255, 255, 0.62);
+}
+
+a.case-card {
+  transition: background-color 220ms ease, transform 220ms ease;
+}
+
+a.case-card:hover,
+a.case-card:focus-visible {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
 }
 
 .experience__link {
@@ -2429,7 +2458,7 @@ button:focus-visible .arrow--diagonal {
   }
 }
 </style>
-<link rel="stylesheet" href="phase1-pages.css">
+<link rel="stylesheet" href="phase1-pages.css?v=phase1-3">
 </head>
 <body>
 <div class="site">
@@ -2518,31 +2547,31 @@ button:focus-visible .arrow--diagonal {
 </div>
 </header>
 <div class="audience-grid">
-<article class="audience-card" data-reveal-item="true">
+<a class="audience-card" href="?page=for-lenders" data-reveal-item="true">
 <span class="card-number">01</span>
 <h3>Lenders and banks</h3>
 <p>Loan security valuations for single assets, portfolios and complex lending decisions.</p>
-</article>
-<article class="audience-card" data-reveal-item="true">
+</a>
+<a class="audience-card" href="?page=for-investors" data-reveal-item="true">
 <span class="card-number">02</span>
 <h3>Investors and funds</h3>
 <p>Independent evidence for acquisition, reporting, strategy and portfolio review.</p>
-</article>
-<article class="audience-card" data-reveal-item="true">
+</a>
+<a class="audience-card" href="?page=for-corporates" data-reveal-item="true">
 <span class="card-number">03</span>
 <h3>Corporates</h3>
 <p>Audit-ready valuations for accounts, governance and property-led decisions.</p>
-</article>
-<article class="audience-card" data-reveal-item="true">
+</a>
+<a class="audience-card" href="?page=for-public-sector" data-reveal-item="true">
 <span class="card-number">04</span>
 <h3>Public sector and NHS</h3>
 <p>Consistent asset register programmes across large and diverse estates.</p>
-</article>
-<article class="audience-card" data-reveal-item="true">
+</a>
+<a class="audience-card" href="?page=for-operators" data-reveal-item="true">
 <span class="card-number">05</span>
 <h3>Operators and developers</h3>
 <p>Valuations for trading assets, development sites and property portfolios.</p>
-</article>
+</a>
 </div>
 </section>
 <section class="services" id="services" aria-labelledby="services-title" data-reveal="true">
@@ -2576,32 +2605,33 @@ button:focus-visible .arrow--diagonal {
 <span class="card-number">04</span>
 <h3>Expert witness</h3>
 <p>Clear, evidence-led valuation opinion for disputes and legal proceedings.</p>
+<span class="card-status">Page deferred pending specialist confirmation</span>
 </article>
-<article class="service-card" data-reveal-item="true">
+<a class="service-card" href="?page=lpa-receivership" data-reveal-item="true">
 <span class="card-number">05</span>
 <h3>LPA receivership</h3>
 <p>Valuation and property strategy for lenders and insolvency practitioners.</p>
-</article>
-<article class="service-card" data-reveal-item="true">
+</a>
+<a class="service-card" href="?page=development-appraisal" data-reveal-item="true">
 <span class="card-number">06</span>
 <h3>Development appraisal</h3>
 <p>Market-tested viability analysis for land and development decisions.</p>
-</article>
-<article class="service-card" data-reveal-item="true">
+</a>
+<a class="service-card" href="?page=portfolio-optimisation" data-reveal-item="true">
 <span class="card-number">07</span>
 <h3>Portfolio optimisation</h3>
 <p>Valuation-led analysis to identify risk, opportunity and next actions.</p>
-</article>
-<article class="service-card" data-reveal-item="true">
+</a>
+<a class="service-card" href="?page=charities-act" data-reveal-item="true">
 <span class="card-number">08</span>
 <h3>Charities Act</h3>
 <p>Qualified valuation advice for charity property acquisitions and disposals.</p>
-</article>
-<article class="service-card" data-reveal-item="true">
+</a>
+<a class="service-card" href="?page=auctions" data-reveal-item="true">
 <span class="card-number">09</span>
 <h3>Auctions</h3>
 <p>Market-facing valuation insight supported by LSH&#x27;s national auctions team.</p>
-</article>
+</a>
 </div>
 </section>
 <section class="specialisms content-section" aria-labelledby="specialisms-title" data-reveal="true">
@@ -2630,6 +2660,7 @@ button:focus-visible .arrow--diagonal {
 <span class="card-number">03</span>
 <h3>Expert witness and Section 18</h3>
 <p>Independent valuation opinion for litigation, arbitration and statutory compensation matters.</p>
+<span class="card-status">Page deferred pending specialist confirmation</span>
 </article>
 <a class="specialism-card" href="?page=residential-btr" data-reveal-item="true">
 <span class="card-number">04</span>
@@ -2654,61 +2685,61 @@ button:focus-visible .arrow--diagonal {
 <h3>Residential and BTR</h3>
 <p>Homes, portfolios and purpose-built rental</p>
 </a>
-<article class="sector-card" data-reveal-item="true">
+<a class="sector-card" href="?page=commercial" data-reveal-item="true">
 <span>02</span>
 <h3>Commercial</h3>
 <p>Offices, retail and industrial property</p>
-</article>
+</a>
 <a class="sector-card" href="?page=operational-real-estate" data-reveal-item="true">
 <span>03</span>
 <h3>Operational real estate</h3>
 <p>Trading assets and operating businesses</p>
 </a>
-<article class="sector-card" data-reveal-item="true">
+<a class="sector-card" href="?page=industrial-logistics" data-reveal-item="true">
 <span>04</span>
 <h3>Industrial and logistics</h3>
 <p>Warehousing, distribution and production</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=retail" data-reveal-item="true">
 <span>05</span>
 <h3>Retail</h3>
 <p>High street, retail parks and shopping centres</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=healthcare" data-reveal-item="true">
 <span>06</span>
 <h3>Healthcare</h3>
 <p>Care, clinical and specialist facilities</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=education" data-reveal-item="true">
 <span>07</span>
 <h3>Education</h3>
 <p>Schools, colleges and universities</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=land-development" data-reveal-item="true">
 <span>08</span>
 <h3>Land and development</h3>
 <p>Sites, viability and development value</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=transport-infrastructure" data-reveal-item="true">
 <span>09</span>
 <h3>Transport and infrastructure</h3>
 <p>Ports, airports and transport assets</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=senior-living" data-reveal-item="true">
 <span>10</span>
 <h3>Senior living</h3>
 <p>Retirement and later-living property</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=student-accommodation" data-reveal-item="true">
 <span>11</span>
 <h3>Student accommodation</h3>
 <p>PBSA schemes and portfolios</p>
-</article>
-<article class="sector-card" data-reveal-item="true">
+</a>
+<a class="sector-card" href="?page=mixed-use" data-reveal-item="true">
 <span>12</span>
 <h3>Mixed use</h3>
 <p>Multi-sector assets and complex portfolios</p>
-</article>
+</a>
 </div>
 </section>
 <section class="coverage" id="coverage" aria-labelledby="coverage-title" data-reveal="true">
@@ -2718,7 +2749,7 @@ button:focus-visible .arrow--diagonal {
 <p>Our valuation teams work from 17 offices across England, Wales, Scotland and Northern Ireland.</p>
 <p>A local valuer leads each instruction, with one national team coordinating portfolios across several regions.</p>
 <p class="coverage__assurance">One valuation team across 17 offices.</p>
-<button type="button" class="button button--light" aria-haspopup="dialog" aria-expanded="false" aria-controls="valuation-team-dialog" data-team-open="true">Find your nearest valuation specialist <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></button>
+<a class="button button--light" href="?page=our-people">Find your nearest valuation specialist <span class="arrow arrow--diagonal" aria-hidden="true"><span></span></span></a>
 <ul class="office-list" aria-label="LSH valuation office locations">
 <li>Belfast</li>
 <li>Birmingham</li>
@@ -2947,7 +2978,7 @@ button:focus-visible .arrow--diagonal {
 </div>
 </header>
 <div class="case-grid">
-<article class="case-card" data-reveal-item="true">
+<a class="case-card" href="?page=case-studies" data-reveal-item="true">
 <div class="case-card__top">
 <span>Loan security · Operational real estate</span>
 <span>01</span>
@@ -2955,8 +2986,8 @@ button:focus-visible .arrow--diagonal {
 <strong class="case-card__value">£93m</strong>
 <h3>Major London leisure complex</h3>
 <p>Loan security valuation of a combined casino and cinema venue for a major UK bank.</p>
-</article>
-<article class="case-card" data-reveal-item="true">
+</a>
+<a class="case-card" href="?page=case-studies" data-reveal-item="true">
 <div class="case-card__top">
 <span>Asset register · Public sector</span>
 <span>02</span>
@@ -2964,8 +2995,8 @@ button:focus-visible .arrow--diagonal {
 <strong class="case-card__value">870</strong>
 <h3>Properties across a London borough</h3>
 <p>A coordinated asset register valuation spanning a diverse local authority estate.</p>
-</article>
-<article class="case-card" data-reveal-item="true">
+</a>
+<a class="case-card" href="?page=case-studies" data-reveal-item="true">
 <div class="case-card__top">
 <span>Expert witness · Commercial</span>
 <span>03</span>
@@ -2973,9 +3004,9 @@ button:focus-visible .arrow--diagonal {
 <strong class="case-card__value">£105.5m</strong>
 <h3>Major London office building</h3>
 <p>Independent valuation evidence prepared for legal proceedings.</p>
-</article>
+</a>
 </div>
-<a class="text-link experience__link" href="https://www.lsh.co.uk/explore/work?action=search&amp;service=1e58eec504bf40ce94171ab2bc8ee879" target="_top">View valuation experience <span class="arrow" aria-hidden="true">
+<a class="text-link experience__link" href="?page=case-studies">View all case studies <span class="arrow" aria-hidden="true">
 <span>
 </span>
 </span>
@@ -3297,7 +3328,7 @@ button:focus-visible .arrow--diagonal {
 </div>
 </div>
 </div>
-<script src="phase1-pages.js"></script>
+<script src="phase1-pages.js?v=phase1-3"></script>
 <script>
 (() => {
   const site = document.querySelector('.site');

@@ -25,7 +25,9 @@ The hub and six destination pages use one shared design system:
 - `?page=financial-reporting`
 - `?page=asset-valuation-services`
 
-The hub links only to routes present in this prototype. Unbuilt client-journey and service pages remain static so they are not mistaken for working controls. Downloads remain labelled as in preparation until approved files are available.
+The hub also includes audience, supporting service, sector, team and case-study click-through routes. See [CLICKTHROUGH-COVERAGE.md](CLICKTHROUGH-COVERAGE.md) for the complete map and the items still awaiting content or approval.
+
+Every linked hub card has a working route in this prototype. Where the brief references a destination without supplying a full page brief, the route is a concise gateway built only from approved source material. Expert Witness remains static because the brief explicitly defers that page. Downloads remain labelled as in preparation until approved files are available.
 
 ## Publishing
 

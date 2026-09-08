@@ -9,7 +9,29 @@
     'residential-btr': 'Residential and BTR',
     'operational-real-estate': 'Operational real estate',
     'financial-reporting': 'Financial reporting',
-    'asset-valuation-services': 'Asset valuation services'
+    'asset-valuation-services': 'Asset valuation services',
+    'for-lenders': 'For lenders and banks',
+    'for-investors': 'For investors and funds',
+    'for-corporates': 'For corporates',
+    'for-public-sector': 'For public sector and NHS',
+    'for-operators': 'For operators and developers',
+    'lpa-receivership': 'LPA receivership',
+    'development-appraisal': 'Development appraisal',
+    'portfolio-optimisation': 'Portfolio optimisation',
+    'charities-act': 'Charities Act valuations',
+    'auctions': 'Auction valuations',
+    'commercial': 'Commercial valuations',
+    'industrial-logistics': 'Industrial and logistics valuations',
+    'retail': 'Retail valuations',
+    'healthcare': 'Healthcare valuations',
+    'education': 'Education valuations',
+    'land-development': 'Land and development valuations',
+    'transport-infrastructure': 'Transport and infrastructure valuations',
+    'senior-living': 'Senior living valuations',
+    'student-accommodation': 'Student accommodation valuations',
+    'mixed-use': 'Mixed-use valuations',
+    'case-studies': 'Valuation case studies',
+    'our-people': 'Our valuation team'
   };
   if (!routes[slug]) return;
 
@@ -139,7 +161,17 @@
         asideTitle: 'Built around lending decisions.',
         asideText: 'Direct asset experience, mandatory peer review and an auditable route from instruction to report.'
       };
-      const sectors = ['Residential and BTR','Offices','Retail','Industrial and logistics','Operational real estate','Healthcare','Land and development','Mixed use'].map((title) => ({ title, text: title === 'Operational real estate' ? 'Hotels, pubs, leisure and other trading assets.' : 'Loan security valuation by a valuer with relevant sector and market experience.', href: title === 'Residential and BTR' ? route('residential-btr') : title === 'Operational real estate' ? route('operational-real-estate') : '' }));
+      const sectorRoutes = {
+        'Residential and BTR': 'residential-btr',
+        'Offices': 'commercial',
+        'Retail': 'retail',
+        'Industrial and logistics': 'industrial-logistics',
+        'Operational real estate': 'operational-real-estate',
+        'Healthcare': 'healthcare',
+        'Land and development': 'land-development',
+        'Mixed use': 'mixed-use'
+      };
+      const sectors = Object.entries(sectorRoutes).map(([title, page]) => ({ title, text: title === 'Operational real estate' ? 'Hotels, pubs, leisure and other trading assets.' : 'Loan security valuation by a valuer with relevant sector and market experience.', href: route(page) }));
       const faqs = [
         ['Are you on lender panels?', 'Yes. LSH is panel-approved for major UK lenders and instructed through VAS Group, CVN, Method and Appraisers UK. Existing users of those platforms can instruct through their normal workflow.'],
         ['What types of property do you value for loan security?', 'We cover every major commercial and specialist property type, including offices, retail, industrial and logistics, residential and BTR, trading assets, healthcare, development land and mixed-use property.'],
@@ -251,11 +283,11 @@
         ['How do you make the valuation defensible for audit?', 'Every report is peer reviewed and carries a complete audit trail. Instructions at £10m or above require a second independent review, with a third-level check at £20m or above.']
       ];
       const sectorCards = [
-        { title: 'Commercial', text: 'Offices, retail, industrial and logistics.' },
+        { title: 'Commercial', text: 'Offices, retail, industrial and logistics.', href: route('commercial') },
         { title: 'Residential and BTR', text: 'Single assets, schemes and portfolios.', href: route('residential-btr') },
         { title: 'Operational real estate', text: 'Hotels and other trading property.', href: route('operational-real-estate') },
         { title: 'Public sector and NHS', text: 'Asset registers and specialist public assets.', href: route('asset-valuation-services') },
-        { title: 'Industrial and logistics', text: 'Warehousing, distribution and production property.' }
+        { title: 'Industrial and logistics', text: 'Warehousing, distribution and production property.', href: route('industrial-logistics') }
       ];
       return hero(page) + subnav([['service','Service'],['why','Why LSH'],['sectors','Sectors'],['experience','Experience'],['insights','Insights'],['faq','FAQs'],['contact','Contact']]) +
         section('service', 'Service overview', 'Valuations prepared for reporting and audit.', `<div class="page-copy"><p>We carry out Regulated Purpose Valuations for company accounts under IFRS and UK GAAP, including IAS16 and IFRS16 instructions for listed companies, REITs, investment funds and public sector bodies.</p><p>Each report is prepared by a named RICS Registered Valuer, checked before issue and structured to give auditors and audit committees a clear, evidenced opinion of value.</p><p>LSH completed 198 Regulated Purpose Valuation and company accounts instructions across 2024 to 2026.</p></div>${generalApprovals}`) +
@@ -312,6 +344,241 @@
     }
   };
 
+  const gatewayPages = {
+    'for-lenders': {
+      kind: 'Who we help', label: 'For lenders and banks', title: 'Valuation support for lending decisions.',
+      lede: 'A direct route to loan security, specialist trading-asset valuation and property restructuring advice.',
+      overview: 'LSH values single assets and national portfolios for banks, building societies and specialist lenders. More than 60% of valuation instructions are lender-led, and every report is prepared by a named RICS Registered Valuer and checked before issue.',
+      scope: ['Loan security valuations across major property sectors', 'Large and multi-region portfolio instructions', 'Operational real estate and other specialist trading assets', 'LPA receivership valuation and property strategy'],
+      related: ['loan-security', 'operational-real-estate', 'lpa-receivership'],
+      contact: 'Discuss a lending instruction.'
+    },
+    'for-investors': {
+      kind: 'Who we help', label: 'For investors and funds', title: 'Evidence for investment and reporting decisions.',
+      lede: 'Independent valuation for acquisitions, financial reporting, portfolio review and specialist assets.',
+      overview: 'Our national team supports investors and funds with evidence-led valuations for decision-making, governance and reporting. Instructions are matched to valuers with relevant sector and local market experience.',
+      scope: ['Acquisition and portfolio review', 'Regulated purpose valuations for accounts', 'Residential and BTR portfolios', 'Operational real estate and trading assets'],
+      related: ['financial-reporting', 'residential-btr', 'operational-real-estate', 'portfolio-optimisation'],
+      contact: 'Discuss an investment valuation.'
+    },
+    'for-corporates': {
+      kind: 'Who we help', label: 'For corporates', title: 'Valuation for accounts and governance.',
+      lede: 'Audit-ready opinions of value for financial reporting, property decisions and portfolio oversight.',
+      overview: 'LSH prepares RICS Red Book compliant valuations for company accounts under IFRS and UK GAAP. Every report is prepared by a named valuer, independently reviewed and supported by a complete instruction record.',
+      scope: ['Regulated purpose valuations', 'IAS16 and IFRS16 reporting requirements', 'Commercial, residential and specialist assets', 'Portfolio valuation and optimisation'],
+      related: ['financial-reporting', 'commercial', 'portfolio-optimisation'],
+      contact: 'Discuss a corporate valuation.'
+    },
+    'for-public-sector': {
+      kind: 'Who we help', label: 'For public sector and NHS', title: 'Auditable valuation across public estates.',
+      lede: 'Structured asset register and financial reporting programmes for NHS bodies, local authorities and government agencies.',
+      overview: 'LSH has completed more than 900 public sector instructions, including portfolios of 870, 555 and 512 assets. The practice coordinates large, varied estates across 17 UK offices within public sector audit timetables.',
+      scope: ['Asset register valuations', 'IAS16 and IFRS16 reporting requirements', 'Existing Use Value, Market Value and DRC', 'Large multi-asset portfolio delivery'],
+      related: ['asset-valuation-services', 'financial-reporting', 'our-approach'],
+      contact: 'Discuss a public sector instruction.'
+    },
+    'for-operators': {
+      kind: 'Who we help', label: 'For operators and developers', title: 'Valuation for operating assets and development.',
+      lede: 'Specialist advice for trading property, development sites and property-led business decisions.',
+      overview: 'Our teams value operational businesses, development sites and mixed portfolios for lending, reporting and transactions. Each instruction is led by a valuer with relevant asset and market experience.',
+      scope: ['Operational real estate and trading assets', 'Development appraisal and residual valuation', 'Loan security and financial reporting', 'Portfolio and transaction advice'],
+      related: ['operational-real-estate', 'development-appraisal', 'loan-security', 'financial-reporting'],
+      contact: 'Discuss an operational or development instruction.'
+    },
+    'lpa-receivership': {
+      kind: 'Valuation service', label: 'LPA receivership', title: 'Valuation and strategy for distressed property.',
+      lede: 'Evidence-led advice for lenders and insolvency practitioners, connected to LSH Property Restructuring.',
+      overview: 'The Property Restructuring team provides valuation and property strategy for lenders and insolvency practitioners. Nick Blackwell is the named specialist in the supplied brief.',
+      scope: ['LPA receivership valuations', 'Single assets and mixed portfolios', 'Property strategy for lenders', 'Coordination with restructuring and agency teams'],
+      related: ['loan-security', 'our-approach'],
+      contact: 'Discuss an LPA receivership instruction.',
+      specialist: 'Nick Blackwell — Property Restructuring / LPA Receivership',
+      external: ['https://www.lsh.co.uk/explore/services/asset-and-debt-advisory', 'Explore LSH Property Restructuring']
+    },
+    'development-appraisal': {
+      kind: 'Valuation service', label: 'Development appraisal', title: 'Market-tested development appraisal.',
+      lede: 'Evidence for land, site viability and development value decisions.',
+      overview: 'For development land and sites, the valuer applies the appropriate RICS-recognised approach, including the residual method where relevant, using current market evidence and agreed assumptions.',
+      scope: ['Development land and sites', 'Residual valuation', 'Loan security instructions', 'Evidence for viability and property decisions'],
+      related: ['land-development', 'loan-security', 'residential-btr', 'our-approach'],
+      contact: 'Discuss a development appraisal.'
+    },
+    'portfolio-optimisation': {
+      kind: 'Valuation service', label: 'Portfolio optimisation', title: 'Valuation-led portfolio review.',
+      lede: 'Clear evidence to identify property risk, opportunity and practical next actions.',
+      overview: 'LSH combines asset-level valuation evidence with sector and local market knowledge to support portfolio review. Where an instruction spans several regions, one national team coordinates delivery across the office network.',
+      scope: ['Asset-level valuation evidence', 'Multi-property portfolio coordination', 'Risk and opportunity review', 'Connections to transaction and sector specialists'],
+      related: ['for-investors', 'operational-real-estate', 'financial-reporting'],
+      contact: 'Discuss a portfolio review.'
+    },
+    'charities-act': {
+      kind: 'Valuation service', label: 'Charities Act', title: 'Qualified valuation advice for charities.',
+      lede: 'Independent property valuation for charity acquisitions and disposals.',
+      overview: 'The supplied brief identifies Charities Act advice as a core valuation service. LSH can route an enquiry to a suitably qualified valuation specialist once the asset, transaction and reporting requirements are confirmed.',
+      scope: ['Property acquisitions', 'Property disposals', 'Independent valuation advice', 'Named RICS Registered Valuer'],
+      related: ['commercial', 'land-development', 'our-approach'],
+      contact: 'Discuss a Charities Act valuation.'
+    },
+    'auctions': {
+      kind: 'Valuation service', label: 'Auctions', title: 'Valuation insight for auction decisions.',
+      lede: 'Market-facing advice supported by LSH’s national property auctions team.',
+      overview: 'Auction instructions draw on valuation evidence, current buyer demand and LSH’s wider disposal experience. The detailed auctions service remains on the main LSH website.',
+      scope: ['Commercial and residential property', 'Pre-sale valuation insight', 'Connection to the national auctions team', 'Clear route from valuation to disposal advice'],
+      related: ['commercial', 'residential-btr', 'our-approach'],
+      contact: 'Discuss an auction valuation.',
+      external: ['https://www.lsh.co.uk/explore/services/commercial-property-auctions', 'Explore LSH Property Auctions']
+    },
+    'commercial': {
+      kind: 'Sector valuation', label: 'Commercial', title: 'Commercial property valuations.',
+      lede: 'Evidence-led valuation for offices, retail and industrial property across the UK.',
+      overview: 'Commercial instructions are assigned to valuers with direct experience of the asset class and its local market. The practice covers lending, financial reporting, portfolio and transaction purposes.',
+      scope: ['Offices', 'Retail property', 'Industrial and logistics assets', 'Mixed commercial portfolios'],
+      related: ['loan-security', 'financial-reporting', 'industrial-logistics', 'retail'],
+      contact: 'Discuss a commercial property valuation.',
+      external: ['https://www.lsh.co.uk/explore/sectors/office', 'Explore wider LSH office advice']
+    },
+    'industrial-logistics': {
+      kind: 'Sector valuation', label: 'Industrial and logistics', title: 'Industrial and logistics valuations.',
+      lede: 'Valuation for warehousing, distribution and production property.',
+      overview: 'LSH matches industrial and logistics instructions to valuers with relevant transactional and local market experience. Work ranges from individual assets to national distribution portfolios.',
+      scope: ['Warehouses and distribution centres', 'Production and industrial property', 'Single assets and national portfolios', 'Loan security and financial reporting'],
+      related: ['loan-security', 'financial-reporting', 'commercial'],
+      contact: 'Discuss an industrial or logistics valuation.'
+    },
+    'retail': {
+      kind: 'Sector valuation', label: 'Retail', title: 'Retail property valuations.',
+      lede: 'Valuation for high streets, retail parks and shopping centres.',
+      overview: 'Retail valuations combine asset-specific evidence with local and national market knowledge. Instructions can be prepared for lending, reporting, portfolio and other agreed purposes.',
+      scope: ['High-street property', 'Retail parks', 'Shopping centres', 'Mixed retail portfolios'],
+      related: ['loan-security', 'financial-reporting', 'commercial'],
+      contact: 'Discuss a retail property valuation.',
+      external: ['https://www.lsh.co.uk/explore/sectors/retail', 'Explore wider LSH retail advice']
+    },
+    'healthcare': {
+      kind: 'Sector valuation', label: 'Healthcare', title: 'Healthcare property valuations.',
+      lede: 'Specialist valuation for care, clinical and medical facilities.',
+      overview: 'Healthcare assets can require an understanding of both the property and its operating context. LSH connects valuation with operational real estate and public sector expertise where the instruction requires it.',
+      scope: ['Care homes and nursing homes', 'Hospitals and clinics', 'GP surgeries and medical centres', 'Loan security and public sector reporting'],
+      related: ['operational-real-estate', 'asset-valuation-services', 'loan-security'],
+      contact: 'Discuss a healthcare valuation.'
+    },
+    'education': {
+      kind: 'Sector valuation', label: 'Education', title: 'Education property valuations.',
+      lede: 'Valuation for schools, colleges, universities and specialist education assets.',
+      overview: 'Education property can form part of public sector asset registers, financial reporting programmes or individual valuation instructions. The appropriate basis and method are agreed at instruction stage.',
+      scope: ['Schools', 'Colleges', 'Universities', 'Specialist education assets'],
+      related: ['asset-valuation-services', 'financial-reporting', 'our-approach'],
+      contact: 'Discuss an education property valuation.'
+    },
+    'land-development': {
+      kind: 'Sector valuation', label: 'Land and development', title: 'Land and development valuations.',
+      lede: 'Evidence for sites, viability, development value and lending decisions.',
+      overview: 'Land and development instructions draw on current market evidence and the valuation method appropriate to the site and purpose, including the residual method where required.',
+      scope: ['Development land and sites', 'Residual valuation', 'Residential development', 'Loan security and portfolio decisions'],
+      related: ['development-appraisal', 'residential-btr', 'loan-security'],
+      contact: 'Discuss a land or development valuation.'
+    },
+    'transport-infrastructure': {
+      kind: 'Sector valuation', label: 'Transport and infrastructure', title: 'Transport and infrastructure valuations.',
+      lede: 'Valuation for ports, transport property and specialist infrastructure assets.',
+      overview: 'Specialist infrastructure requires a clear instruction scope, appropriate basis of value and valuers who understand the asset context. The brief includes a £505m port authority financial reporting instruction among recent work.',
+      scope: ['Ports and port authorities', 'Transport property', 'Roads, bridges and car parks', 'Specialist infrastructure assets'],
+      related: ['financial-reporting', 'asset-valuation-services', 'our-approach'],
+      contact: 'Discuss a transport or infrastructure valuation.',
+      external: ['https://www.lsh.co.uk/explore/sectors/transport/land-and-infrastructure', 'Explore wider LSH transport advice']
+    },
+    'senior-living': {
+      kind: 'Sector valuation', label: 'Senior living', title: 'Senior living valuations.',
+      lede: 'Valuation for retirement and later-living property.',
+      overview: 'Senior living instructions can involve residential evidence, operating considerations and portfolio requirements. The team is selected around the asset and purpose of valuation.',
+      scope: ['Retirement housing', 'Later-living property', 'Residential portfolios', 'Loan security and financial reporting'],
+      related: ['residential-btr', 'healthcare', 'loan-security'],
+      contact: 'Discuss a senior living valuation.'
+    },
+    'student-accommodation': {
+      kind: 'Sector valuation', label: 'Student accommodation', title: 'Student accommodation valuations.',
+      lede: 'Valuation for purpose-built student accommodation schemes and portfolios.',
+      overview: 'PBSA sits within the residential valuation capability described in the brief. LSH can support single schemes and portfolios for lending, financial reporting and agreed management purposes.',
+      scope: ['Purpose-built student accommodation', 'Single schemes and portfolios', 'Loan security', 'Financial reporting'],
+      related: ['residential-btr', 'loan-security', 'financial-reporting'],
+      contact: 'Discuss a student accommodation valuation.'
+    },
+    'mixed-use': {
+      kind: 'Sector valuation', label: 'Mixed use', title: 'Mixed-use property valuations.',
+      lede: 'Coordinated valuation for assets and portfolios spanning several property uses.',
+      overview: 'Mixed-use instructions are coordinated across the relevant sector specialists while retaining one lead valuer and one clear reporting process. The brief includes office, retail, residential and specialist uses.',
+      scope: ['Office and retail uses', 'Residential elements', 'Trading and specialist property', 'Multi-asset portfolios'],
+      related: ['commercial', 'residential-btr', 'operational-real-estate', 'financial-reporting'],
+      contact: 'Discuss a mixed-use valuation.'
+    }
+  };
+
+  const renderGateway = (page) => {
+    const relatedItems = page.related.map((key) => ({ title: routes[key], text: gatewayPages[key]?.lede || 'Read the full valuation service and instruction information.', href: route(key) }));
+    const external = page.external ? `<div class="page-copy"><a class="text-link" href="${page.external[0]}" target="_blank" rel="noopener noreferrer">${page.external[1]} ${diagonalArrow}</a></div>` : '';
+    return hero({
+      label: page.label,
+      title: page.title,
+      lede: page.lede,
+      cta: page.contact,
+      secondary: `<a class="text-link text-link--light" href="${route('our-approach')}">Read about our process ${arrow}</a>`,
+      asideLabel: page.kind,
+      asideTitle: 'A named valuer. A checked report.',
+      asideText: 'Every instruction follows the same six-step process and is matched to relevant sector and local market experience.'
+    }) + subnav([['overview','Overview'],['scope','Scope'],['related','Related services'],['quality','Quality'],['contact','Contact']]) +
+      section('overview', page.kind, page.title, `<div class="page-copy"><p>${page.overview}</p></div>`) +
+      section('scope', 'Instruction scope', 'What this route covers.', assetList(page.scope)) +
+      section('related', 'Related valuation routes', 'Choose the right next step.', featureGrid(relatedItems, relatedItems.length === 4 ? 4 : 3)) +
+      section('quality', 'Quality and delivery', 'The same controls on every instruction.', proofGrid([['RICS','Registered Valuer leads the instruction'],['Every report','Reviewed by a qualified checker'],['17 offices','National reach with local market knowledge']]) + `<div class="page-copy"><a class="text-link text-link--light" href="${route('our-approach')}">Read the six-step process ${arrow}</a></div>`, { dark: true }) +
+      external + contact(page.contact, 'Tell us about the asset, location, valuation purpose and timing.', page.specialist || 'The appropriate sector specialist will be confirmed when scope is agreed.');
+  };
+
+  Object.entries(gatewayPages).forEach(([key, page]) => { pageFactories[key] = () => renderGateway(page); });
+
+  pageFactories['case-studies'] = () => hero({
+    label: 'Recent instructions', title: 'Valuation work across sectors and the UK.',
+    lede: 'Nine anonymised examples from lending, financial reporting, public sector and legal instructions.',
+    cta: 'Discuss a similar instruction',
+    secondary: `<a class="text-link text-link--light" href="${route('our-approach')}">Read about our process ${arrow}</a>`,
+    asideLabel: 'Publication status', asideTitle: 'Anonymised while approval is pending.', asideText: 'Client names and identifying details will only be added after approval.'
+  }) + subnav([['experience','Case studies'],['related','Related services'],['contact','Contact']]) +
+    section('experience', 'Recent instructions', 'Evidence of delivery across asset types.', cases([
+      { meta: 'Loan security · Leisure', value: '£93m', title: 'Major London leisure complex', text: 'Casino and cinema venue valued for a major UK bank.' },
+      { meta: 'Asset register · Public sector', value: '870', title: 'London borough properties', text: 'A coordinated valuation across a diverse local authority estate.' },
+      { meta: 'Expert witness · Office', value: '£105.5m', title: 'Major London office building', text: 'Independent valuation evidence for legal proceedings.' },
+      { meta: 'Loan security · Logistics', value: '£41m–£152m', title: 'UK distribution portfolio', text: 'Four large distribution centres within a national instruction.' },
+      { meta: 'Financial reporting · Residential', value: '£52.35m', title: 'Large apartment complex', text: 'Regulated Purpose Valuation for company accounts.' },
+      { meta: 'Financial reporting · Hotel', value: 'Annual', title: 'Branded hotel', text: 'Annual Regulated Purpose Valuation for an international financial institution.' },
+      { meta: 'Financial reporting · Mixed use', value: '£23.7m', title: 'Cambridge office and retail development', text: 'Regulated Purpose Valuation for company accounts.' },
+      { meta: 'Financial reporting · Infrastructure', value: '£505m', title: 'Major port authority', text: 'Regulated Purpose Valuation for company accounts.' },
+      { meta: 'Asset register · Public sector', value: '555', title: 'London borough properties', text: 'A second major local authority portfolio valuation.' }
+    ])) + related([['loan-security','Loan security'],['financial-reporting','Financial reporting'],['asset-valuation-services','Asset valuation services']]) +
+    contact('Discuss a similar instruction.', 'Tell us about the property, portfolio and valuation purpose.');
+
+  pageFactories['our-people'] = () => hero({
+    label: 'Valuation team', title: 'Find the right valuation specialist.',
+    lede: 'Start with our national valuation leads or use the directory to identify the specialist named in the brief.',
+    cta: 'Contact the valuation team',
+    secondary: '',
+    asideLabel: 'National coverage', asideTitle: 'One practice across 17 offices.', asideText: 'We route each enquiry by instruction type, sector and location.'
+  }) + subnav([['national','National leads'],['specialists','Specialists'],['contact','Contact']]) +
+    section('national', 'National leads', 'Two direct starting points.', `<div class="profile-grid profile-grid--two">
+      <article class="profile-card profile-card--contact" data-reveal-item="true"><span class="profile-card__initials" aria-hidden="true">CF</span><h3>Christiaan Flatley</h3><p>Executive Director — Head of UK Regions, Valuation</p><div class="profile-card__links"><a href="tel:07841684807">07841 684807</a><a href="mailto:CFlatley@lsh.co.uk">CFlatley@lsh.co.uk</a></div></article>
+      <article class="profile-card profile-card--contact" data-reveal-item="true"><span class="profile-card__initials" aria-hidden="true">OL</span><h3>Oliver Leeming</h3><p>Executive Director — Head of Operations, Valuation</p><div class="profile-card__links"><a href="tel:07725207641">07725 207 641</a><a href="mailto:OLeeming@lsh.co.uk">OLeeming@lsh.co.uk</a></div></article>
+    </div><div class="approval-note"><strong>Final hub contacts</strong>The brief requires Oliver to confirm the two national hub contacts before Sitecore publication.</div>`) +
+    section('specialists', 'Specialist directory', 'Named contacts from the supplied brief.', profiles([
+      { initials: 'KH', name: 'Ken Hogg', role: 'Operational Real Estate' },
+      { initials: 'PM', name: 'Phil Macauley', role: 'Self Storage' },
+      { initials: 'JR', name: 'Jaspreet Rahi', role: 'Asset Valuation Services / NHS and Public Sector' },
+      { initials: 'NB', name: 'Nick Blackwell', role: 'Property Restructuring / LPA Receivership' },
+      { initials: 'MR', name: 'Matt Rothery', role: 'London Residential Development' },
+      { initials: 'JB', name: 'James Beale', role: 'London Residential' },
+      { initials: 'EB', name: 'Ed Boulton', role: 'London Residential Investment' },
+      { initials: 'JD', name: 'Jennifer Dunn', role: 'London Commercial — financial reporting candidate' },
+      { initials: 'RL', name: 'Rachel Leggett', role: 'Valuation Compliance Officer' },
+      { initials: 'JM', name: 'Jonathan Manley', role: 'Expert Witness — page deferred pending confirmation' }
+    ])) + contact('Contact the valuation team.', 'Tell us the instruction type, property location and timing. We will connect you with the right specialist.');
+
   const content = pageFactories[slug]();
   const main = document.querySelector('main');
   if (!main) return;
@@ -320,4 +587,5 @@
   document.title = routes[slug] + ' | LSH Valuation';
   const description = document.querySelector('meta[name="description"]');
   if (description) description.content = document.querySelector('.subpage-hero__lede')?.textContent || description.content;
+  if (location.hash) requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView());
 })();
