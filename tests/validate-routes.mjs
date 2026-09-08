@@ -112,6 +112,7 @@ if (/pending approval|approval is pending|candidate page specialist|page deferre
 const unavailableLabels = ['P' + 'DF', 'Lender Capability ' + 'Pack', 'Public Sector Valuation ' + 'Guide', 'Valuation Process ' + 'Overview'];
 if (unavailableLabels.some((label) => allSource.includes(label))) failures.push('An unavailable document reference remains.');
 if (!source.includes('history.scrollRestoration = \'manual\'') || !index.includes('resetRouteViewport')) failures.push('Route-top reset is missing.');
+if (!index.includes("site.querySelectorAll('a[href^=\"?page=\"]')") || !index.includes("link.target = '_blank'")) failures.push('Embedded breakout links are not configured to open at the top in a new tab.');
 if (!index.includes('.site.embedded') || !index.includes('overflow-y: auto')) failures.push('Embedded mobile scrolling styles are missing.');
 
 if (failures.length) {
