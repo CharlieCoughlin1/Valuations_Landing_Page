@@ -1,6 +1,6 @@
 # LSH Valuation Landing Page
 
-A responsive, iframe-ready landing page for Lambert Smith Hampton's national Valuation team.
+A responsive, iframe-ready Phase 1 prototype for Lambert Smith Hampton's national Valuation team.
 
 ## Live page
 
@@ -14,6 +14,19 @@ https://charliecoughlin1.github.io/Valuations_Landing_Page/?embed=1
 
 The embed view removes the standalone header and footer and reports its rendered height to the parent window using the `lsh-valuation-height` message.
 
+## Phase 1 routes
+
+The hub and six destination pages use one shared design system:
+
+- `?page=our-approach`
+- `?page=loan-security`
+- `?page=residential-btr`
+- `?page=operational-real-estate`
+- `?page=financial-reporting`
+- `?page=asset-valuation-services`
+
+The hub links only to routes present in this prototype. Unbuilt client-journey and service pages remain static so they are not mistaken for working controls. Downloads remain labelled as in preparation until approved files are available.
+
 ## Publishing
 
-GitHub Pages deploys automatically from the root of the `main` branch. The production page is self-contained in `index.html` so its branding and layout render consistently on GitHub Pages.
+GitHub Pages deploys automatically from the root of the `main` branch. The hub is in `index.html`; shared subpage content and styles are in `phase1-pages.js` and `phase1-pages.css`.
