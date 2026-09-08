@@ -715,23 +715,6 @@ button:focus-visible .arrow--diagonal {
   color: rgba(255, 255, 255, 0.61);
 }
 
-.card-status {
-  display: block;
-  max-width: 230px;
-  margin-top: auto;
-  padding-top: 24px;
-  color: var(--lsh-red);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.service-card .card-status {
-  color: var(--lsh-gold-light);
-}
-
 .specialisms {
   padding: 124px 0 116px;
 }
@@ -1676,6 +1659,8 @@ a.case-card:focus-visible {
 .team-card:nth-child(8) { animation-delay: 420ms; }
 .team-card:nth-child(9) { animation-delay: 480ms; }
 .team-card:nth-child(10) { animation-delay: 540ms; }
+.team-card:nth-child(11) { animation-delay: 600ms; }
+.team-card:nth-child(12) { animation-delay: 660ms; }
 
 .team-card > img,
 .team-card__portrait {
@@ -1740,19 +1725,6 @@ a.case-card:focus-visible {
   text-decoration: underline;
   text-decoration-color: rgba(204, 32, 48, 0.22);
   text-underline-offset: 3px;
-}
-
-.team-card--placeholder {
-  border-style: dashed;
-  background: rgba(255, 255, 255, 0.58);
-}
-
-.team-card__pending {
-  display: inline-block;
-  margin-top: 12px;
-  color: var(--lsh-mid-grey);
-  font-size: 12px;
-  font-weight: 500;
 }
 
 .team-modal__footer {
@@ -2458,7 +2430,7 @@ a.case-card:focus-visible {
   }
 }
 </style>
-<link rel="stylesheet" href="phase1-pages.css?v=phase1-3">
+<link rel="stylesheet" href="phase1-pages.css?v=phase1-4">
 </head>
 <body>
 <div class="site">
@@ -2601,12 +2573,11 @@ a.case-card:focus-visible {
 <h3>Regulated purpose valuation</h3>
 <p>Independent valuations for company accounts under IFRS and UK GAAP.</p>
 </a>
-<article class="service-card" data-reveal-item="true">
+<a class="service-card" href="?page=expert-witness" data-reveal-item="true">
 <span class="card-number">04</span>
 <h3>Expert witness</h3>
 <p>Clear, evidence-led valuation opinion for disputes and legal proceedings.</p>
-<span class="card-status">Page deferred pending specialist confirmation</span>
-</article>
+</a>
 <a class="service-card" href="?page=lpa-receivership" data-reveal-item="true">
 <span class="card-number">05</span>
 <h3>LPA receivership</h3>
@@ -2656,12 +2627,11 @@ a.case-card:focus-visible {
 <h3>Asset valuation services</h3>
 <p>Structured programmes for NHS bodies, local authorities and government agencies.</p>
 </a>
-<article class="specialism-card" data-reveal-item="true">
+<a class="specialism-card" href="?page=expert-witness" data-reveal-item="true">
 <span class="card-number">03</span>
 <h3>Expert witness and Section 18</h3>
 <p>Independent valuation opinion for litigation, arbitration and statutory compensation matters.</p>
-<span class="card-status">Page deferred pending specialist confirmation</span>
-</article>
+</a>
 <a class="specialism-card" href="?page=residential-btr" data-reveal-item="true">
 <span class="card-number">04</span>
 <h3>Residential and BTR</h3>
@@ -2970,7 +2940,7 @@ a.case-card:focus-visible {
 <header class="section-heading section-heading--light">
 <div>
 <p class="section-label">Recent instructions</p>
-<span class="section-kicker">Examples anonymised while approval is pending</span>
+<span class="section-kicker">Loan security, public sector and legal work</span>
 </div>
 <div>
 <h2 id="experience-title">Recent valuation work.</h2>
@@ -3212,7 +3182,7 @@ a.case-card:focus-visible {
 <div>
 <p class="section-label">Valuation team</p>
 <h2 id="team-dialog-title">Find the right valuer.</h2>
-<p id="team-dialog-description">Our national leads are listed first. More specialist contact details will be added once approved.</p>
+<p id="team-dialog-description">Our national leads are listed first, followed by specialists across services and sectors.</p>
 </div>
 <button class="team-modal__close" type="button" aria-label="Close valuation team" data-team-close="true">
 <span aria-hidden="true">
@@ -3250,7 +3220,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">Operational property</span>
 <h3>Ken Hogg</h3>
 <p>Operational Real Estate</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3259,7 +3228,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">Public sector and NHS</span>
 <h3>Jaspreet Rahi</h3>
 <p>Asset Valuation Services</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3268,7 +3236,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">Operational real estate</span>
 <h3>Phil Macauley</h3>
 <p>Self Storage</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3277,7 +3244,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">LPA receivership</span>
 <h3>Nick Blackwell</h3>
 <p>Property Restructuring</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3286,7 +3252,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">Residential and BTR</span>
 <h3>Matt Rothery</h3>
 <p>London Residential Development</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3295,7 +3260,14 @@ a.case-card:focus-visible {
 <span class="team-card__region">Residential and BTR</span>
 <h3>James Beale</h3>
 <p>London Residential</p>
-<span class="team-card__pending">Contact details pending approval</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">EB</span>
+<div class="team-card__content">
+<span class="team-card__region">Residential investment</span>
+<h3>Ed Boulton</h3>
+<p>London Residential Investment</p>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3304,7 +3276,6 @@ a.case-card:focus-visible {
 <span class="team-card__region">Commercial valuation</span>
 <h3>Jennifer Dunn</h3>
 <p>London Commercial</p>
-<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3313,12 +3284,19 @@ a.case-card:focus-visible {
 <span class="team-card__region">Quality and methodology</span>
 <h3>Rachel Leggett</h3>
 <p>Valuation Compliance Officer</p>
-<span class="team-card__pending">Contact details pending approval</span>
+</div>
+</article>
+<article class="team-card team-card--placeholder">
+<span class="team-card__portrait" aria-hidden="true">JM</span>
+<div class="team-card__content">
+<span class="team-card__region">Legal proceedings</span>
+<h3>Jonathan Manley</h3>
+<p>Expert Witness and Section 18</p>
 </div>
 </article>
 </div>
 <div class="team-modal__footer">
-<p>More team contact details will be added once approved for publication.</p>
+<p>Tell us about your instruction and we will connect you with the right valuer.</p>
 <button type="button" class="text-link" data-team-close="true">Return to the page <span class="arrow" aria-hidden="true">
 <span>
 </span>
@@ -3328,13 +3306,25 @@ a.case-card:focus-visible {
 </div>
 </div>
 </div>
-<script src="phase1-pages.js?v=phase1-3"></script>
+<script src="phase1-pages.js?v=phase1-4"></script>
 <script>
 (() => {
   const site = document.querySelector('.site');
   if (!site) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const embedded = new URLSearchParams(location.search).get('embed') === '1' || self !== top;
+  const query = new URLSearchParams(location.search);
+  const embedded = query.get('embed') === '1' || self !== top;
+  const routePage = query.has('page');
+  const resetRouteViewport = () => {
+    site.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  };
+  if (routePage && !location.hash) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    resetRouteViewport();
+    requestAnimationFrame(resetRouteViewport);
+    addEventListener('pageshow', resetRouteViewport, { once: true });
+  }
   if (embedded) {
     site.classList.add('embedded');
 
@@ -3421,17 +3411,23 @@ a.case-card:focus-visible {
     counterObserver.observe(evidence);
   } else startCounters();
 
-  const navLinks = [...site.querySelectorAll('.section-nav a[href^="#"]')];
+  const navLinks = [...site.querySelectorAll('.section-nav a[href^="#"], .subpage-nav a[href^="#"]')];
   const tracked = navLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
   const setActive = (id) => navLinks.forEach((link) => {
     const active = link.hash === '#' + id;
     link.classList.toggle('is-active', active);
     if (active) {
       link.setAttribute('aria-current', 'location');
-      if (innerWidth <= 850) link.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
+      if (innerWidth <= 850) {
+        const nav = link.closest('nav');
+        nav?.scrollTo({ left: link.offsetLeft - (nav.clientWidth - link.clientWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+      }
     } else link.removeAttribute('aria-current');
   });
-  navLinks.forEach((link) => link.addEventListener('click', () => document.querySelector(link.hash)?.classList.add('is-visible')));
+  navLinks.forEach((link) => link.addEventListener('click', () => {
+    document.querySelector(link.hash)?.classList.add('is-visible');
+    setActive(link.hash.slice(1));
+  }));
   if ('IntersectionObserver' in window) {
     const sectionObserver = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];

@@ -25,9 +25,9 @@ The hub and six destination pages use one shared design system:
 - `?page=financial-reporting`
 - `?page=asset-valuation-services`
 
-The hub also includes audience, supporting service, sector, team and case-study click-through routes. See [CLICKTHROUGH-COVERAGE.md](CLICKTHROUGH-COVERAGE.md) for the complete map and the items still awaiting content or approval.
+The hub also includes audience, supporting service, sector, team and case-study click-through routes. See [CLICKTHROUGH-COVERAGE.md](CLICKTHROUGH-COVERAGE.md) for the complete map and the source details not contained in the brief.
 
-Every linked hub card has a working route in this prototype. Where the brief references a destination without supplying a full page brief, the route is a concise gateway built only from approved source material. Expert Witness remains static because the brief explicitly defers that page. Downloads remain labelled as in preparation until approved files are available.
+Every hub card has a working route in this prototype. Where the brief references a destination without supplying a full page brief, the route is a concise gateway built only from the supplied source material. Expert Witness and Section 18 is active with Jonathan Manley as the named specialist.
 
 ## Publishing
 

@@ -163,7 +163,8 @@
 }
 
 .subpage-nav a:hover,
-.subpage-nav a:focus-visible {
+.subpage-nav a:focus-visible,
+.subpage-nav a.is-active {
   background: rgba(0, 43, 92, 0.055);
   color: var(--lsh-navy);
 }
@@ -458,73 +459,6 @@ a.feature-card:focus-visible {
   border-right: 0;
 }
 
-.pending-note,
-.approval-note {
-  margin-top: 35px;
-  padding: 20px 22px;
-  border-left: 3px solid var(--lsh-gold);
-  background: rgba(200, 160, 50, 0.1);
-  color: var(--ink);
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-.pending-note strong,
-.approval-note strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--lsh-navy);
-  font-weight: 700;
-}
-
-.page-section--dark .pending-note,
-.page-section--dark .approval-note {
-  background: rgba(200, 160, 50, 0.13);
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.page-section--dark .pending-note strong,
-.page-section--dark .approval-note strong {
-  color: var(--lsh-gold-light);
-}
-
-.download-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 30px;
-  align-items: center;
-  margin-top: 45px;
-  padding: 27px;
-  border: 1px solid var(--stroke-dark);
-  border-radius: 4px;
-  background: #fff;
-}
-
-.download-card h3 {
-  margin: 0;
-  font-size: 23px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-}
-
-.download-card p {
-  margin: 9px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.download-card__status {
-  max-width: 185px;
-  color: var(--lsh-red);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.4;
-  text-align: right;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -537,7 +471,7 @@ a.feature-card:focus-visible {
 }
 
 .profile-card {
-  min-height: 255px;
+  min-height: 225px;
   padding: 27px;
   border: 1px solid var(--stroke-dark);
   border-radius: 4px;
@@ -568,14 +502,6 @@ a.feature-card:focus-visible {
   color: var(--muted);
   font-size: 14px;
   font-weight: 300;
-}
-
-.profile-card small {
-  display: block;
-  margin-top: 23px;
-  color: var(--lsh-red);
-  font-size: 12px;
-  font-weight: 700;
 }
 
 .profile-card__links {
@@ -878,15 +804,6 @@ a.feature-card:focus-visible {
 
   .panel-strip span:nth-last-child(-n + 2) {
     border-bottom: 0;
-  }
-
-  .download-card {
-    grid-template-columns: 1fr;
-  }
-
-  .download-card__status {
-    max-width: none;
-    text-align: left;
   }
 
   .case-grid--subpage .case-card {

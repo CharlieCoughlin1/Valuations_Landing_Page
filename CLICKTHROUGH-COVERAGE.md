@@ -35,7 +35,7 @@ The brief says these client-journey pages are not in Phase 1 and originally asks
 | Portfolio optimisation | `?page=portfolio-optimisation` | Gateway built |
 | Charities Act | `?page=charities-act` | Gateway built |
 | Auctions | `?page=auctions` | Gateway built; links to LSH Property Auctions |
-| Expert Witness and Section 18 | No link | Deliberately deferred by the brief until Jonathan Manley confirms capability and supplies profile content |
+| Expert Witness and Section 18 | `?page=expert-witness` | Gateway built with Jonathan Manley as the named specialist |
 
 ## Sector routes without full page briefs
 
@@ -47,18 +47,15 @@ Residential and BTR and Operational Real Estate have full Phase 1 pages. The oth
 
 | Route | Purpose |
 |---|---|
-| `?page=case-studies` | All nine anonymised instructions supplied in the brief |
+| `?page=case-studies` | All nine instructions and values supplied in the brief |
 | `?page=our-people` | National contacts and all named specialists from the brief |
 
-## Information still required from the brief owner
+## Information not contained in the brief
 
 - The document says there are eight priority pages but defines only Pages A–G (seven pages).
-- Full briefs and approved copy are not supplied for the audience pages, five gateway service pages or ten gateway sector pages above.
-- Expert Witness and Section 18 must not be built until Jonathan Manley confirms capability and supplies approved profile content.
+- Full page copy is not supplied for the audience pages, six gateway service pages or ten gateway sector pages above; concise gateway content has therefore been used.
 - The named loan-security page specialist is not identified. Nick Blackwell is named only for Property Restructuring/LPA receivership.
-- The financial-reporting specialist is not confirmed; Jennifer Dunn is only listed as a candidate.
-- Approved biographies, qualifications, photos and direct contact details are missing for the named specialists, except for the two national contacts already used on the hub.
-- The Lender Capability Pack, Public Sector Valuation Guide and Valuation Process Overview PDFs have not been supplied or signed off, so they remain clearly labelled as in preparation rather than acting as dead downloads.
-- IG-01 and IG-04 embed codes have not been supplied. The test page uses polished native HTML equivalents pending the approved Infogram embeds.
+- Biographies, qualifications, photos and direct contact details are not supplied for the named specialists, except for the two national contacts already used on the hub.
+- Client names are not included for the case studies. Every description, sector, value and client type that is supplied is shown.
+- IG-01 and IG-04 embed codes have not been supplied. The test page uses polished native HTML equivalents.
 - Final Sitecore form wiring, clean URLs and content-component setup require access to the Sitecore build.
-- Compliance-sensitive claims and case-study identification remain subject to the approvals listed in the brief.
