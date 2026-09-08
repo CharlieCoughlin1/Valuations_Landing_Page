@@ -274,6 +274,16 @@ button:focus-visible .arrow--diagonal {
   margin-inline: auto;
 }
 
+#audiences,
+#services,
+#sectors,
+#quality,
+#experience,
+#faq,
+#contact {
+  scroll-margin-top: 88px;
+}
+
 .hero {
   position: relative;
   isolation: isolate;
@@ -1778,6 +1788,10 @@ button:focus-visible .arrow--diagonal {
   min-height: 600px;
 }
 
+.embedded .section-nav {
+  display: none;
+}
+
 @keyframes heroContentIn {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -2434,8 +2448,8 @@ button:focus-visible .arrow--diagonal {
 </div>
 </div>
 <aside class="hero__side-note" data-hero="credential" aria-label="Valuation responsibility">
-<span class="hero__side-index">Named responsibility</span>
-<strong>One accountable valuer from instruction to delivery.</strong>
+<span class="hero__side-index">Your lead valuer</span>
+<strong>One lead valuer from instruction to delivery.</strong>
 <p>RICS Red Book compliant. Independently peer reviewed.</p>
 </aside>
 </section>
@@ -2488,8 +2502,8 @@ button:focus-visible .arrow--diagonal {
 <span class="section-kicker">Who we help</span>
 </div>
 <div>
-<h2 id="audiences-title">The right route, from the outset.</h2>
-<p>Our practice covers every major instruction type, from single-asset loan security valuations to regulated purpose valuations, public sector asset registers and expert witness appointments.</p>
+<h2 id="audiences-title">Start with what you need.</h2>
+<p>We value single assets and national portfolios for lending, accounts, public sector reporting, disputes and investment decisions.</p>
 </div>
 </header>
 <div class="audience-grid">
@@ -2516,19 +2530,19 @@ button:focus-visible .arrow--diagonal {
 <article class="audience-card" data-reveal-item="true">
 <span class="card-number">05</span>
 <h3>Operators and developers</h3>
-<p>Sector-led analysis for trading assets, development and optimisation.</p>
+<p>Valuations for trading assets, development sites and property portfolios.</p>
 </article>
 </div>
 </section>
 <section class="services" id="services" aria-labelledby="services-title" data-reveal="true">
 <header class="section-heading section-heading--dark">
 <div>
-<p class="section-label">Core services</p>
-<span class="section-kicker">Nine routes to advice</span>
+<p class="section-label">What we do</p>
+<span class="section-kicker">Nine valuation services</span>
 </div>
 <div>
-<h2 id="services-title">Valuation expertise, matched to purpose.</h2>
-<p>Every instruction is led by a named RICS Registered Valuer, tracked from receipt to report delivery and subject to structured peer review.</p>
+<h2 id="services-title">Valuation for a clear purpose.</h2>
+<p>A named RICS Registered Valuer leads each instruction, and a qualified peer reviews every report before issue.</p>
 </div>
 </header>
 <div class="service-grid">
@@ -2582,19 +2596,19 @@ button:focus-visible .arrow--diagonal {
 <section class="specialisms content-section" aria-labelledby="specialisms-title" data-reveal="true">
 <header class="section-heading section-heading--split">
 <div>
-<p class="section-label">Strategic specialisms</p>
-<span class="section-kicker">Beyond the report</span>
+<p class="section-label">Specialist work</p>
+<span class="section-kicker">Four specialist areas</span>
 </div>
 <div>
-<h2 id="specialisms-title">Specialist advice for complex assets.</h2>
-<p>Where the instruction requires more than a valuation, our teams combine asset-class knowledge with advisory, transaction and portfolio expertise.</p>
+<h2 id="specialisms-title">Advice for complex assets.</h2>
+<p>Some property needs sector knowledge as well as a valuation. Our teams bring both.</p>
 </div>
 </header>
 <div class="specialism-grid">
 <article class="specialism-card" data-reveal-item="true">
 <span class="card-number">01</span>
 <h3>Operational real estate</h3>
-<p>Valuation, M&amp;A advice, portfolio optimisation and transaction support for trading assets.</p>
+<p>Valuation and transaction advice for businesses where the property supports the operation.</p>
 </article>
 <article class="specialism-card" data-reveal-item="true">
 <span class="card-number">02</span>
@@ -2604,7 +2618,7 @@ button:focus-visible .arrow--diagonal {
 <article class="specialism-card" data-reveal-item="true">
 <span class="card-number">03</span>
 <h3>Expert witness and Section 18</h3>
-<p>Defensible opinion for litigation, arbitration and statutory compensation matters.</p>
+<p>Independent valuation opinion for litigation, arbitration and statutory compensation matters.</p>
 </article>
 <article class="specialism-card" data-reveal-item="true">
 <span class="card-number">04</span>
@@ -2616,11 +2630,11 @@ button:focus-visible .arrow--diagonal {
 <section class="sector-section content-section" id="sectors" aria-labelledby="sectors-title" data-reveal="true">
 <header class="section-heading section-heading--split section-heading--compact">
 <div>
-<p class="section-label">Sector intelligence</p>
+<p class="section-label">Sectors we value</p>
 </div>
 <div>
-<h2 id="sectors-title">Direct experience in the asset class.</h2>
-<p>Every sector is supported by valuers with relevant transactional and market experience.</p>
+<h2 id="sectors-title">Valuers who know your sector.</h2>
+<p>We match each instruction with a valuer who knows the asset class and local market.</p>
 </div>
 </header>
 <div class="sector-grid">
@@ -2689,10 +2703,10 @@ button:focus-visible .arrow--diagonal {
 <section class="coverage" id="coverage" aria-labelledby="coverage-title" data-reveal="true">
 <div class="coverage__copy">
 <p class="section-label">National coverage</p>
-<h2 id="coverage-title">UK reach. Local market evidence.</h2>
-<p>Our valuation teams operate from 17 offices across England, Wales, Scotland and Northern Ireland. That gives us the reach to coordinate national portfolios and the local knowledge to value individual assets with precision.</p>
-<p>Whether the instruction covers one regional asset or a portfolio spanning the UK, it is led by a valuer who understands that market.</p>
-<p class="coverage__assurance">Seventeen connected offices, with every instruction led by a valuer who knows the local market.</p>
+<h2 id="coverage-title">National coverage, local knowledge.</h2>
+<p>Our valuation teams work from 17 offices across England, Wales, Scotland and Northern Ireland.</p>
+<p>A local valuer leads each instruction, with one national team coordinating portfolios across several regions.</p>
+<p class="coverage__assurance">One valuation team across 17 offices.</p>
 <ul class="office-list" aria-label="LSH valuation office locations">
 <li>Belfast</li>
 <li>Birmingham</li>
@@ -2855,10 +2869,10 @@ button:focus-visible .arrow--diagonal {
 <header class="section-heading section-heading--split">
 <div>
 <p class="section-label">Quality and methodology</p>
-<span class="section-kicker">Defensible by design</span>
+<span class="section-kicker">How we check every report</span>
 </div>
 <div>
-<h2 id="quality-title">Rigour at every stage.</h2>
+<h2 id="quality-title">Checked at every stage.</h2>
 <p>Every report is checked before issue. Higher-value instructions receive additional independent scrutiny.</p>
 </div>
 </header>
@@ -2911,11 +2925,11 @@ button:focus-visible .arrow--diagonal {
 <header class="section-heading section-heading--light">
 <div>
 <p class="section-label">Recent instructions</p>
-<span class="section-kicker">Anonymised pending client approval</span>
+<span class="section-kicker">Examples anonymised while approval is pending</span>
 </div>
 <div>
-<h2 id="experience-title">Evidence at scale.</h2>
-<p>Recent instructions across lending, public sector and expert evidence.</p>
+<h2 id="experience-title">Recent valuation work.</h2>
+<p>Examples from lending, public sector and legal instructions.</p>
 </div>
 </header>
 <div class="case-grid">
@@ -2956,18 +2970,18 @@ button:focus-visible .arrow--diagonal {
 <section class="insights content-section" aria-labelledby="insights-title" data-reveal="true">
 <header class="section-heading section-heading--split section-heading--compact">
 <div>
-<p class="section-label">Market intelligence</p>
+<p class="section-label">Valuation insight</p>
 </div>
 <div>
-<h2 id="insights-title">Current insight, applied to value.</h2>
+<h2 id="insights-title">Research and guidance from our valuers.</h2>
 </div>
 </header>
 <div class="insight-list">
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/july/q2-investment-top-heavy-amid-geopolitical-challenges" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/rics-red-book-update-10-things-you-need-to-know" target="_top">
 <span class="insight-list__index">01</span>
-<span class="insight-list__meta">Research<small>July 2026</small>
+<span class="insight-list__meta">Valuation guidance<small>October 2023</small>
 </span>
-<strong>Q2 investment ‘Top Heavy’ amid geopolitical challenges</strong>
+<strong>RICS Red Book update: 10 things you need to know</strong>
 <span class="insight-list__arrow">
 <span class="arrow arrow--diagonal" aria-hidden="true">
 <span>
@@ -2975,11 +2989,11 @@ button:focus-visible .arrow--diagonal {
 </span>
 </span>
 </a>
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2026/may/live-and-kicking---lsh-build-to-rent-report-2026" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/view-points/2023/october/the-impact-on-capital-accounting-valuations-of-local-authority-property-assets" target="_top">
 <span class="insight-list__index">02</span>
-<span class="insight-list__meta">Research<small>May 2026</small>
+<span class="insight-list__meta">Public sector valuation<small>October 2023</small>
 </span>
-<strong>Live &amp; Kicking: LSH Build to Rent Report 2026</strong>
+<strong>IFRS 16 and local authority property asset valuations</strong>
 <span class="insight-list__arrow">
 <span class="arrow arrow--diagonal" aria-hidden="true">
 <span>
@@ -2987,11 +3001,11 @@ button:focus-visible .arrow--diagonal {
 </span>
 </span>
 </a>
-<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/news/2026/june/philip-macauley-joins-lsh-to-expand-self-storage-valuation-and-consultancy-offering" target="_top">
+<a data-reveal-item="true" href="https://www.lsh.co.uk/explore/research-and-views/research/2020/july/rising-to-the-challenge" target="_top">
 <span class="insight-list__index">03</span>
-<span class="insight-list__meta">News<small>June 2026</small>
+<span class="insight-list__meta">Valuation research<small>July 2020</small>
 </span>
-<strong>LSH expands its self storage valuation and consultancy offering</strong>
+<strong>Rising to the challenge: how valuers adapted their work</strong>
 <span class="insight-list__arrow">
 <span class="arrow arrow--diagonal" aria-hidden="true">
 <span>
@@ -3009,7 +3023,7 @@ button:focus-visible .arrow--diagonal {
 <section class="faq" id="faq" aria-labelledby="faq-title" data-reveal="true">
 <div class="faq__intro">
 <p class="section-label">Frequently asked questions</p>
-<h2 id="faq-title">Before you instruct.</h2>
+<h2 id="faq-title">Questions before you instruct.</h2>
 <p>Clear answers on scope, standards and delivery.</p>
 </div>
 <div class="faq-list">
@@ -3020,7 +3034,7 @@ button:focus-visible .arrow--diagonal {
 <i aria-hidden="true">
 </i>
 </summary>
-<p>We carry out the full range of RICS-recognised valuation purposes, including loan security, regulated purpose valuations for company accounts, asset register valuations, expert witness appointments, LPA receivership, development appraisal and portfolio optimisation. Every valuation is prepared by a named RICS Registered Valuer and is RICS Red Book compliant.</p>
+<p>We value property for loan security, company accounts, asset registers, disputes, LPA receivership, development appraisal and portfolio review. Every report is prepared by a named RICS Registered Valuer and complies with the RICS Red Book.</p>
 </details>
 <details data-reveal-item="true">
 <summary>
@@ -3083,7 +3097,7 @@ button:focus-visible .arrow--diagonal {
 <i aria-hidden="true">
 </i>
 </summary>
-<p>Complete the enquiry form below or contact one of our national specialists. We will confirm the scope, purpose and parties, issue Terms of Engagement and assign a named RICS Registered Valuer.</p>
+<p>Complete the enquiry form below or speak to one of our national leads. We will confirm the scope, purpose and parties, issue Terms of Engagement and assign a named RICS Registered Valuer.</p>
 </details>
 </div>
 </section>
@@ -3091,8 +3105,8 @@ button:focus-visible .arrow--diagonal {
 <div class="contact__lead">
 <p class="section-label">Start an instruction</p>
 <h2 id="contact-title">Speak to our valuation team.</h2>
-<p>Whether you have a specific instruction in mind or are evaluating LSH as a panel valuer, our national specialists are ready to help.</p>
-<button type="button" class="button button--light" aria-haspopup="dialog" aria-expanded="false" aria-controls="valuation-team-dialog" data-team-open="true">View valuation contacts <span class="arrow arrow--diagonal" aria-hidden="true">
+<p>Tell us what you need valued, where it is and why. We’ll connect you with the right valuer.</p>
+<button type="button" class="button button--light" aria-haspopup="dialog" aria-expanded="false" aria-controls="valuation-team-dialog" data-team-open="true">View valuation team <span class="arrow arrow--diagonal" aria-hidden="true">
 <span>
 </span>
 </span>
@@ -3151,11 +3165,11 @@ button:focus-visible .arrow--diagonal {
 <div class="team-modal__panel" role="dialog" id="valuation-team-dialog" aria-modal="true" aria-labelledby="team-dialog-title" aria-describedby="team-dialog-description">
 <div class="team-modal__header">
 <div>
-<p class="section-label">National and specialist contacts</p>
+<p class="section-label">Valuation team</p>
 <h2 id="team-dialog-title">Find the right valuer.</h2>
-<p id="team-dialog-description">Confirmed national contacts are shown first. Specialist contact details will be added once approved.</p>
+<p id="team-dialog-description">Our national leads are listed first. More specialist contact details will be added once approved.</p>
 </div>
-<button class="team-modal__close" type="button" aria-label="Close valuation contacts" data-team-close="true">
+<button class="team-modal__close" type="button" aria-label="Close valuation team" data-team-close="true">
 <span aria-hidden="true">
 </span>
 </button>
@@ -3188,10 +3202,10 @@ button:focus-visible .arrow--diagonal {
 <article class="team-card team-card--placeholder">
 <span class="team-card__portrait" aria-hidden="true">KH</span>
 <div class="team-card__content">
-<span class="team-card__region">Strategic specialism</span>
+<span class="team-card__region">Operational property</span>
 <h3>Ken Hogg</h3>
 <p>Operational Real Estate</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3200,7 +3214,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Public sector and NHS</span>
 <h3>Jaspreet Rahi</h3>
 <p>Asset Valuation Services</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3209,7 +3223,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Operational real estate</span>
 <h3>Phil Macauley</h3>
 <p>Self Storage</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3218,7 +3232,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">LPA receivership</span>
 <h3>Nick Blackwell</h3>
 <p>Property Restructuring</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3227,7 +3241,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Residential and BTR</span>
 <h3>Matt Rothery</h3>
 <p>London Residential Development</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3236,7 +3250,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Residential and BTR</span>
 <h3>James Beale</h3>
 <p>London Residential</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3245,7 +3259,7 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Commercial valuation</span>
 <h3>Jennifer Dunn</h3>
 <p>London Commercial</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 <article class="team-card team-card--placeholder">
@@ -3254,12 +3268,12 @@ button:focus-visible .arrow--diagonal {
 <span class="team-card__region">Quality and methodology</span>
 <h3>Rachel Leggett</h3>
 <p>Valuation Compliance Officer</p>
-<span class="team-card__pending">Direct details to be supplied</span>
+<span class="team-card__pending">Contact details pending approval</span>
 </div>
 </article>
 </div>
 <div class="team-modal__footer">
-<p>Specialist details are held as placeholders until approved for publication.</p>
+<p>More team contact details will be added once approved for publication.</p>
 <button type="button" class="text-link" data-team-close="true">Return to the page <span class="arrow" aria-hidden="true">
 <span>
 </span>
@@ -3324,8 +3338,12 @@ button:focus-visible .arrow--diagonal {
   const setActive = (id) => navLinks.forEach((link) => {
     const active = link.hash === '#' + id;
     link.classList.toggle('is-active', active);
-    if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    if (active) {
+      link.setAttribute('aria-current', 'location');
+      if (innerWidth <= 850) link.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
+    } else link.removeAttribute('aria-current');
   });
+  navLinks.forEach((link) => link.addEventListener('click', () => document.querySelector(link.hash)?.classList.add('is-visible')));
   if ('IntersectionObserver' in window) {
     const sectionObserver = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
