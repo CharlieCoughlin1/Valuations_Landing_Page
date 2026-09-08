@@ -3315,7 +3315,7 @@ a.case-card:focus-visible {
   const query = new URLSearchParams(location.search);
   const embedded = query.get('embed') === '1' || self !== top;
   const routePage = query.has('page');
-  if (self !== top) {
+  if (embedded) {
     site.querySelectorAll('a[href^="?page="]').forEach((link) => {
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
